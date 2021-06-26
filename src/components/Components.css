@@ -11,7 +11,7 @@
 .nav {
     display: flex;
     color: #000000;
-    padding: 1rem;
+    padding: 0.3rem;
     margin: 0.5rem;
 }
 
@@ -25,6 +25,7 @@ strong {
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
+    margin-left: 2rem;
 }
 .nav__lista {
     display: flex;
@@ -39,10 +40,31 @@ strong {
 
 .nav__item{
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .nav__item:hover{
     color: #5e0870;
     font-size: 2.3rem;
     font-weight: bold;
+}
+
+.img__carrito {
+    width: 3rem;
+    height: 3rem;
+    transition: 0.5s;
+    margin-right: 2rem;
+}
+
+.img__carrito:hover {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.leyenda {
+    font-family: "monserrat";
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-align: center;
 }
