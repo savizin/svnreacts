@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+@font-face {
+    font-family: "monserrat";
+    src: url(../fuentes/montserratmedium.ttf); }
+
+.nav {
+    display: flex;
+    color: #000000;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+strong {
+    font-family: "donau";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.nav__img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+}
+.nav__lista {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "monserrat";
+    font-size: 2rem;
+    font-weight: lighter;
+    list-style: none;
+    width: 100%;
+}
+
+.nav__item{
+    cursor: pointer;
+}
+
+.nav__item:hover{
+    color: #5e0870;
+    font-size: 2.3rem;
+    font-weight: bold;
+}
