@@ -1,7 +1,7 @@
 import React from "react";
-import "./Components.css";
-import Paleta from "../imagen/paleta.png";
-import Carrito from "../components/CartWidget.jsx";
+import "../navbar/NavBar.css";
+import Paleta from "../../assets/imagenes/paleta.png";
+import Carrito from "../cartwidget/CartWidget.jsx";
 
 const NavBar = () => {
     return (

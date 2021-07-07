@@ -1,0 +1,15 @@
+.botonMas {
+    width: 4rem;
+    height: 4rem;
+    color: green;
+    font-family: "donau";
+    font-weight: bolder;
+}
+
+.botonMenos {
+    width: 4rem;
+    height: 4rem;
+    color:blue;
+    font-family: "donau";
+    font-weight: bolder;
+}
