@@ -1,13 +1,37 @@
-import React from 'react';
 import "../itemcount/ItemCount.css";
+import React, { useState } from 'react'; 
 
-const Agregar = ({resta, suma}) => {
-      return (
-        <>
-          <div className="botonMenos" onClick={resta}>-</div>
-          <div className="botonMas" onClick={suma}>+</div>
-        </>
-      );
-} 
+const ItemCount = ({inicial, stock}) => {
+  const [contador, setContador] = useState(0);   
 
-export default Agregar;
+  inicial = 0;
+  stock = 3;
+
+  const sumar = () => {
+    if (contador === stock) {
+      return;
+    }
+    else {
+      setContador (contador + 1);
+    }
+  }
+
+  const restar = () => {
+    if (contador === inicial) {
+      return;
+    }
+    else {
+    setContador (contador - 1);
+    }
+  }
+
+  return(
+    <>
+      <button className="contador__boton" onClick={restar}>-</button>
+      <span className="contador__num">{contador}</span>
+      <button className="contador__boton" onClick={sumar}>+</button>
+    </>
+  )
+}
+
+export default ItemCount;
