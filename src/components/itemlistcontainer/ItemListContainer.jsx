@@ -1,6 +1,7 @@
 import React from "react";
 import "../itemlistcontainer/ItemListContainer.css";
 import ItemCount from "../itemcount/ItemCount.jsx";
+import ItemList from "../item/ItemList.jsx";
 
 const Container = (props) => {
     return (
@@ -9,6 +10,7 @@ const Container = (props) => {
         <div className="contador">
             <ItemCount/>       
         </div>
+        <ItemList/>
     </>
     );
 }
