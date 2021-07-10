@@ -7,6 +7,12 @@
 @font-face {
     font-family: "monserrat";
     src: url(/src/assets/fuentes/montserratmedium.ttf); }
+
+.ItemListContainer {
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+}
     
 .leyenda {
     font-family: "monserrat";
@@ -24,6 +30,9 @@
 }
 
 .obras {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 27rem 27rem 27rem;
+    grid-template-rows: repeat (40rem);
+    justify-content: center;
+    gap: 1%;
 }

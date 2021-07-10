@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import Item from "../item/Item.jsx";
-import ArrayObras from "../item/ArrayObras.jsx";
+import Obras from "../item/ArrayObras.jsx";
 
 const ItemList = (props) => {
     const [displayItems, setDisplayItems] = useState ([]);
@@ -8,7 +8,7 @@ const ItemList = (props) => {
     const getItems = () => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
-                resolve (ArrayObras);
+                resolve (Obras);
                 reject ("Error en la consulta");
             }, 2000);
         });
@@ -20,8 +20,7 @@ const ItemList = (props) => {
    
     return (
         <>
-        {displayItems.length > 0 &&
-        displayItems.map((item) => <Item item={item} />)}
+        {displayItems.map((item) => <Item item={item} />)}
         </>
     );
 }

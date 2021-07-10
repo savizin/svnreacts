@@ -9,7 +9,7 @@ function Item ({item}) {
         <div className="textoTarj">
             <small>{item.nb}</small>
             <small>{item.med}</small>
-            <small>{item.precio}</small>
+            <small>${item.precio}</small>
         </div>
     </div>
     </>

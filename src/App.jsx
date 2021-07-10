@@ -6,11 +6,11 @@ function App() {
   return (
     <div className="aplicacion">
       <NavBar />
-      <ItemListContainer leyenda="Obras de arte disponible para su compra"/>
-      <div className="seccion">
+      <header className="seccion">
         <h1 className="seccion__titulo">SVN</h1>
         <h2 className="seccion__subtitulo">ARTE EN COLORES</h2>
-      </div>
+      </header>
+      <ItemListContainer leyenda="Obras de arte disponible para su compra"/>
     </div>
   );
 }

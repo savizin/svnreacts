@@ -21,13 +21,16 @@ body {
 
 .seccion {
   position: absolute;
-  bottom: 2rem;
+  top: 4rem;
+  display: flex;
+  justify-content: center;
   width: 100%;
   padding: 1rem 1rem 0rem 1rem;
 }
 
 .seccion__titulo {
-  color: #ff5e03;
+  color: #faff03;
+  font-size: 0.1rem;
 }
 
 .seccion__subtitulo {
@@ -35,7 +38,6 @@ body {
   font-size: 4rem;
   font-weight: bold;
   color: #000000;
-  text-align: center;
   letter-spacing: 2rem;
   margin-bottom: 1rem;
 }
