@@ -16,3 +16,14 @@
     text-align: center;
     margin: 0.5rem;
 }
+
+.contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.obras {
+    display: flex;
+    flex-wrap: wrap;
+}

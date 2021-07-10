@@ -4,12 +4,6 @@
     box-sizing: border-box;
 }
 
-.contador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .contador__boton {
     font-family: "donau";
     font-weight: bolder;

@@ -4,9 +4,6 @@ import React, { useState } from 'react';
 const ItemCount = ({inicial, stock}) => {
   const [contador, setContador] = useState(0);   
 
-  inicial = 0;
-  stock = 3;
-
   const sumar = () => {
     if (contador === stock) {
       return;

@@ -1,21 +1,30 @@
-import React, { useState } from 'react'; 
+import React, { useEffect, useState } from 'react'; 
 import Item from "../item/Item.jsx";
+import ArrayObras from "../item/ArrayObras.jsx";
 
-const Productos = () => {
+const ItemList = (props) => {
     const [displayItems, setDisplayItems] = useState ([]);
 
     const getItems = () => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
-                resolve (Item);
+                resolve (ArrayObras);
                 reject ("Error en la consulta");
             }, 2000);
         });
     };
 
-    getItems().then((result) => setDisplayItems (result));
-    return <obras displayItems = {displayItems}/>;
+    useEffect(() => {
+        getItems().then(res => setDisplayItems(res))
+      }, []);
+   
+    return (
+        <>
+        {displayItems.length > 0 &&
+        displayItems.map((item) => <Item item={item} />)}
+        </>
+    );
 }
 
-export default Productos;
+export default ItemList;
 

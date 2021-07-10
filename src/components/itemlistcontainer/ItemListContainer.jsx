@@ -8,9 +8,11 @@ const Container = (props) => {
     <>
         <p className="leyenda">{props.leyenda}</p>
         <div className="contador">
-            <ItemCount/>       
+            <ItemCount inicial={0} stock={3}/>       
         </div>
-        <ItemList/>
+        <div className="obras">
+            <ItemList/>
+        </div>
     </>
     );
 }
