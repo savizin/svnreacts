@@ -1,0 +1,48 @@
+.tarjetaDetail {
+    width: 25rem;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid #000000 0.2rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #000000;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.imagenDetail {
+    width: 20rem;
+    height: 20rem;
+    margin: 0.5rem;
+}
+
+.textoDetail {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "monserrat";
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+
+.contDetail {
+    margin: 0.5rem;
+}
+
+.botonDetail {
+    background-color: #5e0870;
+    border: solid #000000 0.2rem;
+    color: #ffffff;
+    font-family: "donau";
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.botonDetail:hover {
+    background-color: #faff03;
+    color: #000000;
+}

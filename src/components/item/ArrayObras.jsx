@@ -74,7 +74,7 @@ const obras = [
     {   id: 13,
         nb: "LOS NIÑOS", 
         precio: 4000, 
-        ed: "40x40", 
+        med: "40x40", 
         img1: "https://via.placeholder.com/300"
     },
     {   id: 14,

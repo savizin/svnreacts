@@ -10,7 +10,7 @@ const ItemList = (props) => {
             setTimeout(() => {
                 resolve (Obras);
                 reject ("Error en la consulta");
-            }, 2000);
+            }, 1000);
         });
     };
 
