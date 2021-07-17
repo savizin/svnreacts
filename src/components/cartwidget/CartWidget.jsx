@@ -1,5 +1,5 @@
 import React from "react";
-import "../cartwidget/CartWidget.css";
+import "../cartwidget/cartWidget.css";
 import {MdShoppingCart} from "react-icons/md";
 
 const IconoCarrito = () => {

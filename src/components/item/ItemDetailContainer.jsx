@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import ItemDetail from "../item/ItemDetail.jsx";
-import Obras from "../item/ArrayObras.jsx";
+import {obras} from "../obras/obras.json";
 
 const ItemDetailContainer = (props) => {
     const [displayItems, setDisplayItems] = useState ([]);
@@ -8,7 +8,7 @@ const ItemDetailContainer = (props) => {
     const getItemsDetail = () => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
-                resolve (Obras.filter((el) => el.id === 8));
+                resolve (obras.filter((el) => el.id === 8));
                 reject ("Error en la consulta");
             }, 2000);
         });       

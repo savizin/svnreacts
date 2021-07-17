@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react'; 
 import Item from "../item/Item.jsx";
-import Obras from "../item/ArrayObras.jsx";
+import obras from "../obras/obras.json";
+import {useParams} from "react-router";
 
-const ItemList = (props) => {
+const ItemList = (props) => {  
+    
+    const {categoria} = useParams ();   
+
     const [displayItems, setDisplayItems] = useState ([]);
 
     const getItems = () => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
-                resolve (Obras);
+                if (categoria) {
+                    let filtroObras =   (obras.filter ((string) => string.categoria === categoria));
+                    resolve (filtroObras);
+                }
+                else {
+                    resolve (obras);
+                } 
                 reject ("Error en la consulta");
             }, 1000);
         });
@@ -20,7 +30,7 @@ const ItemList = (props) => {
    
     return (
         <>
-        {displayItems.map((item) => <Item item={item} />)}
+        {displayItems.map((item) => <Item item={item}/>)}
         </>
     );
 }

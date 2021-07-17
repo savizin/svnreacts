@@ -43,12 +43,14 @@ strong {
     width: 100%;
 }
 
-.nav__item{
+a:-webkit-any-link {
+    color: #000000;
+    text-decoration: none;
     cursor: pointer;
     transition: 0.5s;
 }
 
-.nav__item:hover{
+a:-webkit-any-link:hover{
     color: #5e0870;
     font-size: 2.3rem;
     font-weight: bold;

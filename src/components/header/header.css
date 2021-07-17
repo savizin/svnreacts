@@ -1,0 +1,23 @@
+.seccion {
+    position: absolute;
+    top: 4rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 20rem;
+    padding: 1rem 1rem 0rem 1rem;
+}
+  
+.seccion__titulo {
+    color: #faff03;
+    font-size: 0.1rem;
+}
+  
+.seccion__subtitulo {
+    font-family: "donau";
+    font-size: 4rem;
+    font-weight: bold;
+    color: #000000;
+    letter-spacing: 2rem;
+    margin-bottom: 1rem;
+}

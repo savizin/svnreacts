@@ -1,16 +1,15 @@
 import React from "react";
-import "../itemlistcontainer/ItemListContainer.css";
-import ItemDetailContainer from "../item/ItemDetailContainer.jsx";
+import "../itemlistcontainer/itemListContainer.css";
+import ItemList from "../item/ItemList.jsx";
 
 const Container = (props) => {
+
     return (
     <>
     <div className="ItemListContainer">
         <p className="leyenda">{props.leyenda}</p>
         <div className="obras">
-        </div>
-        <div className="obrasDetail">
-            <ItemDetailContainer/>
+            <ItemList/>
         </div>
     </div>
     </>
