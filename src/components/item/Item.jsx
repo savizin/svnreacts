@@ -11,6 +11,7 @@ function Item ({item}) {
             <small>{item.med}</small>
             <small>${item.precio}</small>
         </div>
+        <button className="botonTarj">Ver más</button>
     </div>
     </>
     )

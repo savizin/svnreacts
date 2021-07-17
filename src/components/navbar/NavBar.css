@@ -1,35 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: "donau";
-    src: url(/src/assets/fuentes/donau.otf); }
-
-@font-face {
-    font-family: "monserrat";
-    src: url(/src/assets/fuentes/montserratmedium.ttf); }
-
 .nav {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: #000000;
     padding: 0.3rem;
     margin: 0.5rem;
 }
-
-strong {
-    font-family: "donau";
-    font-size: 3rem;
-    font-weight: bold;
-}
-
+   
 .nav__img {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-    margin-left: 2rem;
+    width: 10rem;
+    height: 10rem;
+    margin-right: 0.3rem;
+    margin-left: 0.7rem;
 }
 
 .nav__lista {

@@ -1,16 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-  
-@font-face {
-    font-family: "monserrat";
-    src: url(/src/assets/fuentes/montserratmedium.ttf); }
-
 .ItemListContainer {
     position: absolute;
-    top: 10rem;
+    top: 16rem;
     width: 100%;
 }
     
