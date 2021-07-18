@@ -1,13 +1,13 @@
 import React from "react";
 import "../navbar/navBar.css";
-import Svn from "../../assets/imagenes/imgnav.png";
+import SVN from "../../assets/imagenes/imgnav.png";
 import Carrito from "../cartwidget/CartWidget.jsx";
 import {Link} from "react-router-dom";
 
 const NavBar = () => {
     return (
     <nav className="nav">
-        <img className="nav__img" src={Svn} alt="svn"/>
+        <img className="nav__img" src={SVN} alt="svn"/>
         <ul className="nav__lista">
             <li><Link to={"/"}>Inicio</Link></li>
             <li><Link to={"/categoria/c1"}>Categoría 1</Link></li>

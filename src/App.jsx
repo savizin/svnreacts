@@ -1,16 +1,16 @@
 import "./App.css";
-import {BrowserRouter, Switch, Route, Router} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Footer from "../src/components/footer/Footer.jsx"
 import NavBar from "../src/components/navbar/NavBar.jsx";
 import ItemListContainer from "../src/components/itemlistcontainer/ItemListContainer.jsx";
+import ItemDetailContainer from "../src/components/item/ItemDetailContainer";
 import CartContextProvider from "./context/CartContext.jsx";
 
 function App() {
   return (
     <CartContextProvider>
     <BrowserRouter>
-   
       <NavBar/>
       <Header/>
         <Switch>
@@ -21,7 +21,7 @@ function App() {
             <ItemListContainer leyenda="Obras de arte disponible para su compra"/>
           </Route>
           <Route path="/detalleobra/:id">
-      
+            <ItemDetailContainer />
           </Route>
         </Switch>
     </BrowserRouter>

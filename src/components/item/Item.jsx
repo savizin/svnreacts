@@ -1,5 +1,6 @@
 import React from "react";
 import "../item/item.css";
+import {Link} from "react-router-dom";
 
 function Item ({item}) {
     return (
@@ -11,7 +12,7 @@ function Item ({item}) {
             <small>{item.med}</small>
             <small>${item.precio}</small>
         </div>
-        <button className="botonTarj">Ver más</button>
+        <button className="botonTarj"><Link to={`/detalleobra/${item.id}`}>Ver más</Link></button>
     </div>
     </>
     )

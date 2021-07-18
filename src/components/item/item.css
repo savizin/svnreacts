@@ -33,7 +33,6 @@
     font-family: "monserrat";
     font-weight: bold;
     font-size: 1rem;
-    color: #5e0870;
     background-color: #faff03;
     border: solid 0.1rem #000000;
     border-radius: 0.5rem;
@@ -44,7 +43,11 @@
     transition: 0.3s;
 }
 
+a:-webkit-any-link:hover {
+    font-size: 1.3rem;
+    color: #5e0870;
+}
+
 .botonTarj:hover {
-    font-size: 1.2rem;
     border: solid 0.2rem #000000;
 }

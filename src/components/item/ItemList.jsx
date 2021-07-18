@@ -20,13 +20,13 @@ const ItemList = (props) => {
                     resolve (obras);
                 } 
                 reject ("Error en la consulta");
-            }, 1000);
+            }, 2000);
         });
     };
 
     useEffect(() => {
         getItems().then(res => setDisplayItems(res))
-      }, []);
+      }, [categoria]);
    
     return (
         <>
