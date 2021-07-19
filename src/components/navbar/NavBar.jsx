@@ -1,18 +1,18 @@
 import React from "react";
 import "../navbar/navBar.css";
-import SVN from "../../assets/imagenes/imgnav.png";
+import LogoNavBar from "./LogoNavBar";
 import Carrito from "../cartwidget/CartWidget.jsx";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
     return (
     <nav className="nav">
-        <img className="nav__img" src={SVN} alt="svn"/>
+        <LogoNavBar />
         <ul className="nav__lista">
-            <li><Link to={"/"}>Inicio</Link></li>
-            <li><Link to={"/categoria/c1"}>Categoría 1</Link></li>
-            <li><Link to={"/categoria/c2"}>Categoría 2</Link></li>
-            <li><Link to={"/categoria/c3"}>Categoría 3</Link></li>
+            <li><NavLink to={"/"}>Inicio</NavLink></li>
+            <li><NavLink to={"/categoria/c1"}>Categoría 1</NavLink></li>
+            <li><NavLink to={"/categoria/c2"}>Categoría 2</NavLink></li>
+            <li><NavLink to={"/categoria/c3"}>Categoría 3</NavLink></li>
         </ul>
         <Carrito  />
     </nav>

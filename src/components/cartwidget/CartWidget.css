@@ -4,9 +4,7 @@
     color: #000000;
     box-shadow: 0.5rem 0.5rem 0.5rem #5e0870;
     transition: 0.5s;
-    padding: 0.2rem;
-    margin-top: 0.2rem;
-    margin-right: 2rem;
+    margin-right: 2.5rem;
 }
 
 .img__carrito:hover {

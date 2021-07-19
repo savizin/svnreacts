@@ -13,8 +13,7 @@ const ItemList = (props) => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
                 if (categoria) {
-                    let filtroObras = (obras.filter ((string) => string.categoria === categoria));
-                    resolve (filtroObras);
+                    resolve = obras.filter ((string) => string.categoria === categoria);
                 }
                 else {
                     resolve (obras);

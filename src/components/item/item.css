@@ -12,12 +12,18 @@
     background-color: #f8f3b1;
     padding: 1rem;
     margin: 1rem;
+    transition: 0.3s;
 }
 
 .imagenTarj {
     width: 18rem;
     height: 18rem;
     margin: 0.5rem;
+}
+
+.imagenTarj:hover {
+    width: 20rem;
+    height: 20rem;
 }
 
 .textoTarj {
@@ -32,7 +38,6 @@
 .botonTarj {
     font-family: "monserrat";
     font-weight: bold;
-    font-size: 1rem;
     background-color: #faff03;
     border: solid 0.1rem #000000;
     border-radius: 0.5rem;
@@ -43,11 +48,7 @@
     transition: 0.3s;
 }
 
-a:-webkit-any-link:hover {
-    font-size: 1.3rem;
-    color: #5e0870;
-}
-
 .botonTarj:hover {
     border: solid 0.2rem #000000;
 }
+

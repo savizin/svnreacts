@@ -11,8 +11,8 @@ const ItemDetailContainer = (props) => {
     const getItemsDetail = () => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
-                let filtroDetail = obras.filter((number) => number.id === id);
-                resolve (filtroDetail);
+                let filtroDetail = obras.filter((number) => number.id === parseInt(id));
+                resolve (filtroDetail[0]);
                 reject ("Error en la consulta");
             }, 1000);
         });       
@@ -24,8 +24,8 @@ const ItemDetailContainer = (props) => {
 
     return (
         <>
-        {displayItems.map (itemDetail => <ItemDetail itemDetail={itemDetail}/>)}
-        </>
+        {(Object.entries(displayItems).length !== 0) ? (<ItemDetail producto={displayItems} />) : (<h2>Cargando...</h2>)}
+        </> 
     );
 }
 

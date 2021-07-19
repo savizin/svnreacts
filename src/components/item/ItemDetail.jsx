@@ -6,7 +6,7 @@ function ItemDetail ({itemDetail}) {
     return (
     <>
         <div className="tarjetaDetail"> 
-            <img className="imagenDetail" src={itemDetail.img1} alt="itemDetail"/>
+        <img className="imagenDetail" src={itemDetail.img1} alt="itemDetail"/>
             <div className="textoDetail">
                 <small>{itemDetail.nb}</small>
                 <small>{itemDetail.med}</small>

@@ -1,3 +1,7 @@
+# SVN - ARTE EN COLORES
+Mi proyecto consiste en realizar un e-commerce para los cuadros que pinto.
+Todas las obras son pintadas a mano, en acrílico. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

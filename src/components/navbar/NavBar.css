@@ -3,14 +3,14 @@
     align-items: center;
     justify-content: space-between;
     color: #000000;
-    padding: 0.3rem;
-    margin: 0.5rem;
+    padding: 0.2rem;
+    margin: 0.2rem;
 }
    
 .nav__img {
     width: 10rem;
     height: 10rem;
-    margin-left: 0.5rem;
+    margin-left: 1rem;
 }
 
 .nav__lista {
