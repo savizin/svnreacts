@@ -4,11 +4,12 @@ import ItemDetail from "../item/ItemDetail.jsx";
 import obras from "../obras/obras.json";
 
 const ItemDetailContainer = (props) => {
-    const id = useParams();
     
-    const [displayItems, setDisplayItems] = useState ([]);
+    const {id} = useParams();
+    
+    const [displayObra, setDisplayObra] = useState ({});
 
-    const getItemsDetail = () => {
+    const getObrasDetail = (id) => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
                 let filtroDetail = obras.filter((number) => number.id === parseInt(id));
@@ -19,12 +20,14 @@ const ItemDetailContainer = (props) => {
     }
 
     useEffect(() => {
-        getItemsDetail().then(res => setDisplayItems(res))
+        getObrasDetail(id).then(res => setDisplayObra(res))
       }, [id]);
 
     return (
         <>
-        {(Object.entries(displayItems).length !== 0) ? (<ItemDetail producto={displayItems} />) : (<h2>Cargando...</h2>)}
+        {(Object.entries(displayObra).length !== 0) ? 
+        (<ItemDetail itemDetail={displayObra} />) : 
+        (<h2>Cargando...</h2>)}
         </> 
     );
 }

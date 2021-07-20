@@ -38,6 +38,7 @@
 .botonTarj {
     font-family: "monserrat";
     font-weight: bold;
+    font-size: 1.2rem;
     background-color: #faff03;
     border: solid 0.1rem #000000;
     border-radius: 0.5rem;
@@ -49,6 +50,6 @@
 }
 
 .botonTarj:hover {
+    font-size: 1.5rem;
     border: solid 0.2rem #000000;
 }
-

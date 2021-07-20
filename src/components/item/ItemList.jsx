@@ -5,15 +5,16 @@ import {useParams} from "react-router";
 
 const ItemList = (props) => {  
     
-    const {categoria} = useParams ();   
-
     const [displayItems, setDisplayItems] = useState ([]);
+
+    const {categoria} = useParams ();   
 
     const getItems = () => {
         return new Promise ((resolve, reject) => {
             setTimeout(() => {
                 if (categoria) {
-                    resolve = obras.filter ((string) => string.categoria === categoria);
+                    let filtrarObras = obras.filter ((string) => string.categoria === categoria);
+                    resolve (filtrarObras);
                 }
                 else {
                     resolve (obras);
@@ -24,12 +25,16 @@ const ItemList = (props) => {
     };
 
     useEffect(() => {
-        getItems().then(res => setDisplayItems(res))
+        setDisplayItems ([]);
+        getItems().then((res) => setDisplayItems(res));
       }, [categoria]);
    
     return (
         <>
-        {displayItems.map((item) => <Item item={item}/>)}
+        {displayItems.map((item) => (
+            <Item key={item.id} item={item}/>
+            ))
+        }
         </>
     );
 }
