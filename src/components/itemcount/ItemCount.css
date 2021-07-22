@@ -1,3 +1,9 @@
+.contador {
+    display:flex;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+
 .contador__boton {
     font-family: "donau";
     font-weight: bolder;
@@ -19,4 +25,22 @@
     color: #000000;
     padding: 0rem 0.3rem;
     margin: 0rem 0.5rem;
+}
+
+.contador__boton2 {
+    font-family: "monserrat";
+    font-size: 1.2rem;
+    text-align: center;
+    color: #f8f3b1;
+    background-color: #5e0870;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;  
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    transition: 0.3s;
+}
+
+.contador__boton2:hover {
+    font-size: 1.5rem;
+    cursor: pointer;
 }
