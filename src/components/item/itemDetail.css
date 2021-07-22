@@ -42,6 +42,12 @@
     color: #000000;
 }
 
+.botones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .botonFinalizar {
     font-family: "monserrat";
     font-size: 1.2rem;
@@ -56,5 +62,23 @@
 }
 
 .botonFinalizar:hover {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+}
+
+.botonInicio {
+    font-family: "monserrat";
+    font-size: 1.2rem;
+    text-align: center;
+    color: #000000;
+    background-color: #faff03;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;  
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    transition: 0.3s;
+}
+
+
+.botonInicio:hover {
+    font-size: 1.5rem;
 }
