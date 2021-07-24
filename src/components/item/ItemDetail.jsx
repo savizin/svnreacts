@@ -14,9 +14,9 @@ const [agregar, setAgregar] = useState (true);
 
 function agregarProducto () {
     setAgregar (!agregar);  
-    agregarAlCarrito ({
+    agregarAlCarrito([
         itemDetail,
-    })
+    ]);
 }
 
     return (

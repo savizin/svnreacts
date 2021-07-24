@@ -4,11 +4,10 @@ import ItemDetail from "../components/item/ItemDetail";
 export const CartContext = createContext ();
 
 const CartContextProvider = ({children}) => {
+
     const [carrito, setCarrito] = useState ([ItemDetail]);
 
     const agregarAlCarrito = (item) => {
-        
-
         setCarrito ([...carrito, item]);
     }
 

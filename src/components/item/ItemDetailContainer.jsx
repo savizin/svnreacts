@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from "../item/ItemDetail.jsx";
 import obras from "../obras/obras.json";
+import Spiner from '../spiner/Spiner.jsx';
 
 const ItemDetailContainer = (props) => {
     
@@ -15,7 +16,7 @@ const ItemDetailContainer = (props) => {
                 let filtroDetail = obras.filter((number) => number.id === parseInt(id));
                 resolve (filtroDetail[0]);
                 reject ("Error en la consulta");
-            }, 1000);
+            }, 3000);
         });       
     }
 
@@ -27,7 +28,7 @@ const ItemDetailContainer = (props) => {
         <>
         {(Object.entries(displayObra).length !== 0) ? 
         (<ItemDetail itemDetail={displayObra} />) : 
-        (<h2>Cargando...</h2>)}
+        (<Spiner/>)}
         </> 
     );
 }

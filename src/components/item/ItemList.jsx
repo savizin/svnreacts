@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Item from "../item/Item.jsx";
 import obras from "../obras/obras.json";
 import {useParams} from "react-router";
+import Spiner from "../spiner/Spiner.jsx";
 
 const ItemList = (props) => {  
     
@@ -20,7 +21,7 @@ const ItemList = (props) => {
                     resolve (obras);
                 } 
                 reject ("Error en la consulta");
-            }, 2000);
+            }, 3000);
         });
     };
 
@@ -31,9 +32,8 @@ const ItemList = (props) => {
    
     return (
         <>
-        {displayItems.map((item) => (
-            <Item key={item.id} item={item}/>
-            ))
+        {displayItems.length ? 
+        (displayItems.map((item) => (<Item key={item.id} item={item}/>))) : (<Spiner />)
         }
         </>
     );
