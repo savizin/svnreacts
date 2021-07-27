@@ -7,12 +7,25 @@ const CartContextProvider = ({children}) => {
 
     const [carrito, setCarrito] = useState ([ItemDetail]);
 
-    const agregarAlCarrito = (item) => {
-        setCarrito ([...carrito, item]);
+    const agregarAlCarrito = (itemDetail) => {
+        setCarrito ([...carrito, itemDetail.id]);
+    }
+
+    const eliminarProducto = (id) => {
+        setCarrito (carrito.filter (prod => prod.id !== id))
+    }
+
+    const totalCarrito = () => {
+        return carrito.reduce ( (acc, prod) => acc + (prod.precio * prod.cantidad), 0 )
+    }
+
+    const cantidadCarrito = () => {
+        return carrito.reduce ( (acc, prod) => acc + prod.cantidad, 0 )
     }
 
     return (
-        <CartContext.Provider value= {{carrito, agregarAlCarrito}}>
+        <CartContext.Provider value= 
+        {{carrito, agregarAlCarrito, totalCarrito, cantidadCarrito, eliminarProducto}}>
             {children}
         </CartContext.Provider>
     )

@@ -5,6 +5,7 @@
     box-shadow: 0.5rem 0.5rem 0.5rem #5e0870;
     transition: 0.5s;
     margin-right: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .img__carrito:hover {
@@ -12,3 +13,9 @@
     height: 4rem;
 }
 
+.carrito__carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
