@@ -1,27 +1,18 @@
 import "../itemcount/itemCount.css";
-import React, { useState } from 'react'; 
+import React, {useState} from "react";
 
-const ItemCount = ({inicial, stock}) => {
+const ItemCount = () => {
 
   const [contador, setContador] = useState(0);   
 
   const sumar = () => {
-    if (contador === stock) {
-      return;
-    }
-    else {
-      setContador (contador + 1);
-    }
+    contador < 3 && setContador (contador + 1)
+  }
+  
+  const restar = () => {
+    contador > 1 && setContador (contador - 1);
   }
 
-  const restar = () => {
-    if (contador === inicial) {
-      return;
-    }
-    else {
-    setContador (contador - 1);
-    }
-  }
 
   return(
     <>
@@ -32,6 +23,7 @@ const ItemCount = ({inicial, stock}) => {
       </div>
     </>
   )
+
 }
 
 export default ItemCount;

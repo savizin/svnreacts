@@ -1,27 +1,20 @@
 import React, {useContext} from "react";
 import ItemCount from "../itemcount/ItemCount.jsx";
 import "../item/itemDetail.css";
-import { useState } from "react";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 function ItemDetail ({itemDetail}) {
 
-const {agregarAlCarrito, carrito, eliminarProducto} = useContext(CartContext);
+const {agregarAlCarrito, carrito, eliminarDelCarrito} = useContext(CartContext);
 console.log(carrito);
 
-const [agregar, setAgregar] = useState (true);
-
-function agregarProducto () {
-    setAgregar (!agregar);  
-    agregarAlCarrito([
-        itemDetail.nb,
-        itemDetail.med,
-        itemDetail.precio,
-    ]);
+function agregarProducto () { 
+    agregarAlCarrito (itemDetail);
 }
 
 function borrarProducto () {
-    eliminarProducto (itemDetail.id);
+    eliminarDelCarrito (itemDetail.id);
 }
 
     return (
@@ -32,11 +25,12 @@ function borrarProducto () {
             <small>{itemDetail.med}</small>
             <small>${itemDetail.precio}</small>
         </div>
-        <div className="contDetail">
-            {agregar && (<ItemCount inicial={0} stock={3}/>) }      
+        <ItemCount />
+        <div className="botones">    
             <button className="botonAgregar" onClick={agregarProducto}>Agregar al carrito</button>
             <button className="botonEliminar" onClick={borrarProducto}>Eliminar producto</button>
         </div>
+        <button className="botonInicio"><Link to={"/"}>Seguir comprando</Link></button>
     </div>
     )
 }

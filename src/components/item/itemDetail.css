@@ -10,11 +10,11 @@
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 0.5rem #5e0870;
     background-color: #f8f3b1;
-    width: 26rem;
-    height: 45rem;
+    width: 30rem;
+    height: 44rem;
     padding: 1rem;
-    margin-top: -20rem;
-    margin-left: -13rem;
+    margin-top: -22rem;
+    margin-left: -15rem;
 }
 
 .imagenDetail {
@@ -33,21 +33,45 @@
     margin: 0.5rem;
 }
 
-.contDetail {
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem;
-}
-
-.botonDetail:hover {
-    background-color: #faff03;
-    color: #000000;
-}
-
 .botones{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.botonAgregar, .botonEliminar {
+    font-family: "monserrat";
+    font-size: 1.2rem;
+    text-align: center;
+    color: #f8f3b1;
+    background-color: #5e0870;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;  
+    padding: 0.5rem;
+    margin: 0.5rem 1rem;
+    transition: 0.5s;
+}
+
+.botonAgregar:hover, .botonEliminar:hover {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.botonInicio {
+    font-family: "monserrat";
+    font-size: 1.2rem;
+    text-align: center;
+    color: #000000;
+    background-color: #faff03;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;  
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    transition: 0.3s;
+}
+
+.botonInicio:hover {
+    font-size: 1.5rem;
 }
 
 .botonFinalizar {
@@ -65,40 +89,4 @@
 
 .botonFinalizar:hover {
     font-size: 1.5rem;
-}
-
-.botonInicio {
-    font-family: "monserrat";
-    font-size: 1.2rem;
-    text-align: center;
-    color: #000000;
-    background-color: #faff03;
-    border: solid #000000 0.2rem;
-    border-radius: 0.5rem;  
-    padding: 0.5rem;
-    margin: 0.5rem 0rem;
-    transition: 0.3s;
-}
-
-
-.botonInicio:hover {
-    font-size: 1.5rem;
-}
-
-.botonAgregar, .botonEliminar {
-    font-family: "monserrat";
-    font-size: 1.2rem;
-    text-align: center;
-    color: #f8f3b1;
-    background-color: #5e0870;
-    border: solid #000000 0.2rem;
-    border-radius: 0.5rem;  
-    padding: 0.5rem;
-    margin: 0.5rem 0rem;
-    transition: 0.3s;
-}
-
-.botonAgregar:hover, .botonEliminar:hover {
-    font-size: 1.5rem;
-    cursor: pointer;
 }
