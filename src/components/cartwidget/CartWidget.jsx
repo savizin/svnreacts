@@ -10,8 +10,8 @@ const IconoCarrito = () => {
     return (
         <div className="carrito__carrito">
             <MdShoppingCart className="img__carrito"/>
-            <p>Cantidad: {cantidadCarrito()} </p>
-            <p>Total: ${totalCarrito()} </p>
+            <p className="info">Cantidad: {cantidadCarrito()} </p>
+            <p className="info">Total: ${totalCarrito()} </p>
         </div>
     );
 }

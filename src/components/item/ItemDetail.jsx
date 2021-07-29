@@ -1,21 +1,30 @@
-import React, {useContext} from "react";
-import ItemCount from "../itemcount/ItemCount.jsx";
+import React, {useContext, useState} from "react";
 import "../item/itemDetail.css";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 function ItemDetail ({itemDetail}) {
 
+const [contador, setContador] = useState (0);   
+
+    const sumar = () => {
+        contador < 3 && setContador (contador + 1)
+    }
+    
+    const restar = () => {
+        contador > 1 && setContador (contador - 1);
+    }
+
 const {agregarAlCarrito, carrito, eliminarDelCarrito} = useContext(CartContext);
 console.log(carrito);
 
-function agregarProducto () { 
-    agregarAlCarrito (itemDetail);
-}
+    function agregarProducto () { 
+        agregarAlCarrito ({...itemDetail, cantidad: contador});
+    }
 
-function borrarProducto () {
-    eliminarDelCarrito (itemDetail.id);
-}
+    function borrarProducto () {
+        eliminarDelCarrito (itemDetail.id);
+    }
 
     return (
     <div className="tarjetaDetail"> 
@@ -25,7 +34,11 @@ function borrarProducto () {
             <small>{itemDetail.med}</small>
             <small>${itemDetail.precio}</small>
         </div>
-        <ItemCount />
+        <div className="contador">
+            <button className="contador__boton" onClick={restar}>-</button>
+            <span className="contador__num">{contador}</span>
+            <button className="contador__boton" onClick={sumar}>+</button>
+        </div>
         <div className="botones">    
             <button className="botonAgregar" onClick={agregarProducto}>Agregar al carrito</button>
             <button className="botonEliminar" onClick={borrarProducto}>Eliminar producto</button>
