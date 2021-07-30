@@ -1,0 +1,121 @@
+.cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ff5403;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #000000;
+    padding: 1rem 3rem;
+    margin: 5rem 20rem;   
+}
+
+.cart__titulo {
+    font-family: "donau";
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cart__obras {
+    width: 100%;
+    margin: 0.3rem;
+}
+
+.cart__totales {
+    display: flex;
+    padding: 0.5rem;
+    margin: 0.5rem 5rem;
+}
+
+.info {
+    font-family: "monserrat";
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0rem 2rem 0rem 2rem;
+}
+
+.cart__sinobras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart__mensaje {
+    font-family: "monserrat";
+    font-size: 1.8rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff0303;
+    padding: 0.2rem;
+    margin: 1rem;
+}
+
+.cart__botoninicio {
+    font-family: "monserrat";
+    font-size: 1.2rem;
+    color: #000000;
+    background-color: #faff03;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;  
+    width: 20rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0rem;
+    transition: 0.3s;
+}
+
+.cart__botoninicio:hover {
+    font-size: 1.5rem;
+}
+
+.itemcart {
+    display: grid;
+    grid-template-columns: 10rem 20rem 7rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.itemcart__img {
+    display: grid;
+    grid-column: 1;
+    width: 7rem;
+    height: 7rem;
+    margin: 0.5rem 1.5rem;
+}
+
+.itemcart__descripcion {
+    display: grid;
+    grid-column: 2;
+    font-family: "monserrat";
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    margin: 0.5rem;
+}
+
+.itemcart__borrar {
+    display: grid;
+    grid-column: 3;
+    justify-content: flex-end;
+    margin-left: 2rem;
+}
+
+.itemcart__borrar--tacho {
+    width: 2rem;
+    height: 2rem;
+    color: #ff0303;
+    background-color: #000000;
+    transition: 0.5s;
+    padding: 0.3rem;
+    margin: 0.5rem 3rem;
+}
+
+.itemcart__borrar--tacho:hover {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.1rem;
+}
+

@@ -4,8 +4,8 @@ import Header from "./components/header/Header.jsx";
 import NavBar from "../src/components/navbar/NavBar.jsx";
 import ItemListContainer from "../src/components/itemlistcontainer/ItemListContainer.jsx";
 import ItemDetailContainer from "../src/components/item/ItemDetailContainer";
-import CartWidget from "../src/components/cartwidget/CartWidget.jsx";
 import CartContextProvider from "./context/CartContext.jsx";
+import Cart from "./components/cart/Cart.jsx";
 
 function App() {
 
@@ -25,7 +25,7 @@ function App() {
               <ItemDetailContainer />
             </Route>
             <Route path="/cart/:cart">
-              <CartWidget />
+              <Cart />
             </Route>
           </Switch>
       </BrowserRouter>

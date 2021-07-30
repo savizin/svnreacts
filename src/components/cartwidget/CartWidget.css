@@ -1,10 +1,17 @@
+.carrito__carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem;
+    margin-right: 4rem;
+}
+
 .img__carrito {
-    width: 3.3rem;
-    height: 3.3rem;
+    width: 3rem;
+    height: 3rem;
     color: #000000;
     box-shadow: 0.5rem 0.5rem 0.5rem #5e0870;
     transition: 0.5s;
-    margin-right: 6rem;
     margin-bottom: 1rem;
 }
 
@@ -13,16 +20,15 @@
     height: 4rem;
 }
 
-.carrito__carrito {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.info {
-    font-family: "monserrat";
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0.2rem;
+.total__carrito {
+    font-family: "donau";
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #ffffff;
+    background-color: #5e0870;
+    border-radius: 50%;
+    width: 1.7rem;
+    height: 2rem;
+    border-radius: 50%;
 }

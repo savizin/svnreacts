@@ -1,17 +1,17 @@
 import React, { useContext } from "react";
 import "../cartwidget/cartWidget.css";
 import {MdShoppingCart} from "react-icons/md";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 const IconoCarrito = () => {
 
-    const {cantidadCarrito, totalCarrito} = useContext (CartContext);
+    const {cantidadCarrito} = useContext (CartContext);
 
     return (
         <div className="carrito__carrito">
-            <MdShoppingCart className="img__carrito"/>
-            <p className="info">Cantidad: {cantidadCarrito()} </p>
-            <p className="info">Total: ${totalCarrito()} </p>
+            <Link to={"/cart/cart"}><MdShoppingCart className="img__carrito"/></Link>
+            <span className="total__carrito">{cantidadCarrito()}</span>
         </div>
     );
 }
