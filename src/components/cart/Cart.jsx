@@ -6,10 +6,11 @@ import ItemCart from "./ItemCart";
 
 function Cart (props) {
 
-    const {carrito} = useContext (CartContext);
+    const {carrito, cantidadCarrito, totalCarrito} = useContext (CartContext);
 
     return (
         <div className="cart">
+            <p className="cart__titulo">RESUMEN DE TU COMPRA:</p>
             <div className="cart__obras">
                 {(!carrito.length) ?         
                 (<div className="cart__sinobras">
@@ -17,6 +18,10 @@ function Cart (props) {
                     <button className="cart__botoninicio"><Link to={"/"}>Seguir comprando</Link></button>
                 </div>) : 
                 (carrito.map((itemDetail) => (<ItemCart key={itemDetail.id} itemDetail={itemDetail}/>)))}
+            </div>
+            <div className="cart__totales">
+                <p className="info">Cantidad: {cantidadCarrito()}</p>
+                <p className="info">Total: ${totalCarrito()}</p>
             </div>
         </div>
     );

@@ -8,11 +8,17 @@ function ItemDetail ({itemDetail}) {
 
 const [contador, setContador] = useState (1);   
 
-const {agregarAlCarrito, carrito} = useContext(CartContext);
+const {agregarAlCarrito, carrito, editarCarrito, verificarCarrito} = useContext(CartContext);
 console.log(carrito);
 
     function agregarProducto () { 
-        agregarAlCarrito ({...itemDetail, cantidad: contador});
+        if (verificarCarrito(itemDetail.id)) {
+            editarCarrito ({...itemDetail, cantidad: contador})
+        }
+        else {
+            agregarAlCarrito ({...itemDetail, cantidad: contador});
+        }
+        
     }
 
     return (

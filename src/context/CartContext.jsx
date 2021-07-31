@@ -10,6 +10,18 @@ const CartContextProvider = ({children}) => {
         setCarrito ([...carrito, itemDetail])
     }
 
+    const verificarCarrito = (id) => {
+        const verificar = carrito.filter ((itemDetail) => itemDetail.id === id);
+        return verificar.length > 0;
+      };
+    
+    const editarCarrito = (itemEditado) => {
+        const editar = carrito.map((itemDetail) =>
+          itemDetail.id === itemEditado.id ? itemEditado : itemDetail
+        );
+        setCarrito (editar);
+      };
+
     const eliminarDelCarrito = (id) => {
         setCarrito (carrito.filter (prod => prod.id !== id))
     }
@@ -28,7 +40,7 @@ const CartContextProvider = ({children}) => {
 
     return (
         <CartContext.Provider value= 
-        {{carrito, agregarAlCarrito, eliminarDelCarrito, totalCarrito, cantidadCarrito, totalPrecio}}>
+        {{carrito, agregarAlCarrito, eliminarDelCarrito, totalCarrito, cantidadCarrito, totalPrecio, verificarCarrito, editarCarrito}}>
             {children}
         </CartContext.Provider>
     )
