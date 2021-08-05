@@ -10,18 +10,21 @@ function Cart (props) {
 
     return (
         <div className="cart">
-            <p className="cart__titulo">RESUMEN DE TU COMPRA:</p>
             <div className="cart__obras">
                 {(!carrito.length) ?         
                 (<div className="cart__sinobras">
                     <p className="cart__mensaje">No se han añadido productos al carrito</p>
                     <button className="cart__botoninicio"><Link to={"/"}>Seguir comprando</Link></button>
                 </div>) : 
-                (carrito.map((itemDetail) => (<ItemCart key={itemDetail.id} itemDetail={itemDetail}/>)))}
-            </div>
-            <div className="cart__totales">
-                <p className="info">Cantidad: {cantidadCarrito()}</p>
-                <p className="info">Total: ${totalCarrito()}</p>
+                (carrito.map((itemDetail) => (
+                <>
+                    <p className="cart__titulo">RESUMEN DE TU COMPRA:</p>
+                    <ItemCart key={itemDetail.id} itemDetail={itemDetail}/>
+                    <div className="cart__totales">
+                        <p className="info">Cantidad: {cantidadCarrito()}</p>
+                        <p className="info">Total: ${totalCarrito()}</p>
+                    </div>
+                </>)))}
             </div>
         </div>
     );

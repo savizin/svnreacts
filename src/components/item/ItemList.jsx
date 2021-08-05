@@ -1,39 +1,50 @@
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect, useState} from 'react'; 
 import Item from "../item/Item.jsx";
-import obras from "../obras/obras.json";
-import {useParams} from "react-router";
+import {database} from "../../firebase/firebase.jsx";
 import Spiner from "../spiner/Spiner.jsx";
+import { useParams } from 'react-router-dom';
 
-const ItemList = (props) => {  
+const ItemList = () => {  
     
-    const [displayItems, setDisplayItems] = useState ([]);
+    const [displayObras, setdisplayObras] = useState ([]);
 
-    const {categoria} = useParams ();   
+    const {categoria} = useParams (); 
 
-    const getItems = () => {
-        return new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                if (categoria) {
-                    let filtrarObras = obras.filter ((string) => string.categoria === categoria);
-                    resolve (filtrarObras);
-                }
-                else {
-                    resolve (obras);
-                } 
-                reject ("Error en la consulta");
-            }, 3000);
-        });
+    const obrasDisponibles = () => {
+
+        const obras = database.collection ("obras") 
+              
+        if (categoria) {
+          obras
+          .where ("categoria", "==", `${categoria}`)
+          .get().then ((query) => 
+            setdisplayObras (
+              query.docs.map((doc) => {
+                return {...doc.data(), categoria: doc.categoria,
+                        ...doc.data(), id: doc.id};
+              })
+            ));
+        }
+        else {
+          obras
+          .get().then ((query) => 
+            setdisplayObras (
+              query.docs.map((doc) => {
+                return {...doc.data(), id: doc.id};
+              })
+            ));
+        }
     };
 
     useEffect(() => {
-        setDisplayItems ([]);
-        getItems().then((res) => setDisplayItems(res));
-      }, [categoria]);
+        setdisplayObras ([]);
+        obrasDisponibles () 
+    },[categoria]);
    
     return (
         <>
-        {displayItems.length ? 
-        (displayItems.map((item) => (<Item key={item.id} item={item}/>))) : (<Spiner />)
+        {displayObras.length ? 
+        (displayObras.map((obra) => (<Item key={obra.id} obra={obra}/>))) : (<Spiner />)
         }
         </>
     );

@@ -18,15 +18,14 @@ console.log(carrito);
         else {
             agregarAlCarrito ({...itemDetail, cantidad: contador});
         }
-        
     }
 
     return (
     <div className="tarjetaDetail"> 
-        <img className="imagenDetail" src={itemDetail.img1} alt="itemDetail"/>
+        <img className="imagenDetail" src={itemDetail.img} alt={itemDetail.nombre}/>
         <div className="textoDetail">
-            <small>{itemDetail.nb}</small>
-            <small>{itemDetail.med}</small>
+            <small>{itemDetail.nombre}</small>
+            <small>{itemDetail.medida}</small>
             <small>${itemDetail.precio}</small>
         </div>
         <Contador contador={contador} setContador={setContador}/>

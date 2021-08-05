@@ -2,16 +2,16 @@ import React from "react";
 import "../item/item.css";
 import {Link} from "react-router-dom";
 
-function Item ({item}) {    
+function Item ({obra}) {    
     return (
     <div className="tarjeta"> 
-        <img className="imagenTarj" src={item.img1} alt="obra"/>
+        <img className="imagenTarj" src={obra.img} alt={obra.nombre}/>
         <div className="textoTarj">
-            <small>{item.nb}</small>
-            <small>{item.med}</small>
-            <small>${item.precio}</small>
+            <small>{obra.nombre}</small>
+            <small>{obra.medida}</small>
+            <small>${obra.precio}</small>
         </div>
-        <button className="botonTarj"><Link to={`/detalleobra/${item.id}`}>Ver más</Link></button>
+        <button className="botonTarj"><Link to={`/detalleobra/${obra.id}`}>Ver más</Link></button>
     </div>
     )
 }
