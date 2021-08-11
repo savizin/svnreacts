@@ -74,19 +74,3 @@
     font-size: 1.5rem;
 }
 
-.botonFinalizar {
-    font-family: "monserrat";
-    font-size: 1.2rem;
-    text-align: center;
-    color: #f8f3b1;
-    background-color: #26cf11;
-    border: solid #000000 0.2rem;
-    border-radius: 0.5rem;  
-    padding: 0.5rem;
-    margin: 0.5rem 0rem;
-    transition: 0.3s;
-}
-
-.botonFinalizar:hover {
-    font-size: 1.5rem;
-}

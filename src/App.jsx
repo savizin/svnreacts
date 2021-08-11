@@ -6,6 +6,7 @@ import ItemListContainer from "../src/components/itemlistcontainer/ItemListConta
 import ItemDetailContainer from "../src/components/item/ItemDetailContainer";
 import CartContextProvider from "./context/CartContext.jsx";
 import Cart from "./components/cart/Cart.jsx";
+import Formulario from "./components/formulario/Formulario";
 
 function App() {
 
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route path="/cart/:cart">
               <Cart />
+            </Route>
+            <Route path="/formulario/:formulario">
+              <Formulario />
             </Route>
           </Switch>
       </BrowserRouter>

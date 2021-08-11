@@ -118,3 +118,24 @@
     padding: 0.1rem;
 }
 
+.cart__botoncomprar {
+    display: flex;
+    justify-content: center;
+    font-family: "donau";
+    font-size: 2.5rem;
+    font-weight: bold;
+    word-spacing: 0.3rem;
+    text-align: center;
+    color: #000000;
+    background-color: #faff03;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;  
+    padding: 0.5rem;
+    margin: 0.8rem 8rem;
+    transition: 0.3s;
+}
+
+.cart__botoncomprar:hover {
+    font-size: 3rem;
+    cursor: pointer;
+}

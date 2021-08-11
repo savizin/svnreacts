@@ -13,10 +13,10 @@ function ItemCart ({itemDetail}) {
 
     return (
         <div className="itemcart">
-            <img className="itemcart__img" src={itemDetail.img1} alt="itemDetail"/>
+            <img className="itemcart__img" src={itemDetail.img} alt="itemDetail"/>
             <div className="itemcart__descripcion">
-                <small>Obra: "{itemDetail.nb}"</small>
-                <small>Medida: {itemDetail.med}</small>
+                <small>Obra: "{itemDetail.nombre}"</small>
+                <small>Medida: {itemDetail.medida}</small>
                 <small>Precio: ${itemDetail.precio}</small>
                 <small>Cantidad: {itemDetail.cantidad}</small>
             </div>

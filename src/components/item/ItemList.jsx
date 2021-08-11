@@ -20,8 +20,7 @@ const ItemList = () => {
           .get().then ((query) => 
             setdisplayObras (
               query.docs.map((doc) => {
-                return {...doc.data(), categoria: doc.categoria,
-                        ...doc.data(), id: doc.id};
+                return {...doc.data(), categoria: doc.categoria, id: doc.id};
               })
             ));
         }

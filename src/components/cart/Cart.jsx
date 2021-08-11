@@ -14,17 +14,22 @@ function Cart (props) {
                 {(!carrito.length) ?         
                 (<div className="cart__sinobras">
                     <p className="cart__mensaje">No se han añadido productos al carrito</p>
-                    <button className="cart__botoninicio"><Link to={"/"}>Seguir comprando</Link></button>
-                </div>) : 
-                (carrito.map((itemDetail) => (
-                <>
+                    <button className="cart__botoninicio">
+                        <Link to={"/"}>Seguir comprando</Link>
+                    </button>
+                 </div>) : 
+                (<>
                     <p className="cart__titulo">RESUMEN DE TU COMPRA:</p>
-                    <ItemCart key={itemDetail.id} itemDetail={itemDetail}/>
+                    {carrito.map((itemDetail) => <ItemCart key={itemDetail.id} itemDetail={itemDetail}/>)}
                     <div className="cart__totales">
                         <p className="info">Cantidad: {cantidadCarrito()}</p>
                         <p className="info">Total: ${totalCarrito()}</p>
                     </div>
-                </>)))}
+                    <bottom className="cart__botoncomprar">
+                        <Link to={"/formulario/formulario"}>FINALIZAR COMPRA</Link>
+                    </bottom>
+                </>)                 
+                }
             </div>
         </div>
     );

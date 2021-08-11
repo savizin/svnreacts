@@ -13,14 +13,15 @@ const ItemDetailContainer = (props) => {
     const getObrasDetail = () => {
         const obraDetalle = database
         .collection("obras")
+        .doc (id)
       
-        obraDetalle.get().then ((query) => 
-            setDisplayObra (
-                query.docs.map((doc) => {
-                    return {...doc.data(), id: doc.id};
-                })
-            )
-        );
+        obraDetalle.get().then ((doc) => {
+            if (doc.exists) {
+                setDisplayObra ({...doc.data(), id: doc.id})
+            } else {
+                alert ("Error en la consulta");
+            }
+        });
     };
 
     useEffect(() => {
@@ -34,6 +35,7 @@ const ItemDetailContainer = (props) => {
         (<Spiner/>)}
         </> 
     );
+
 }
 
 export default ItemDetailContainer;

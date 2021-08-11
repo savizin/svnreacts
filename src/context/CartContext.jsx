@@ -38,9 +38,14 @@ const CartContextProvider = ({children}) => {
         return carrito.reduce ( (acc, prod) => acc + prod.cantidad, 0 )
     }
 
+    const limpiarCarrito = () => {
+        return carrito.clear();
+    }
+
+
     return (
         <CartContext.Provider value= 
-        {{carrito, agregarAlCarrito, eliminarDelCarrito, totalCarrito, cantidadCarrito, totalPrecio, verificarCarrito, editarCarrito}}>
+        {{carrito, agregarAlCarrito, eliminarDelCarrito, totalCarrito, cantidadCarrito, totalPrecio, verificarCarrito, editarCarrito, limpiarCarrito}}>
             {children}
         </CartContext.Provider>
     )

@@ -1,0 +1,76 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff5403;
+    border: solid #000000 0.2rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem #000000;
+    font-family: "monserrat";
+    padding: 1rem 3rem;
+    margin: 5rem 20rem;  
+}
+
+.formulario__titulo { 
+    font-family: "donau";
+    font-size: 3rem;
+    color: #000000;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.3rem;
+    margin: 0.5rem;
+}
+
+.formulario__subtitulo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.8rem;
+    color: #000000;
+    margin: 0.3rem;
+}
+
+.formulario__item {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 1.2rem;
+}
+
+.formulario__item input {   
+    font-size: 1.3rem;
+    width: 20rem;
+    border: solid #000000 0.1rem;
+    border-radius: 0.5rem;
+    padding: 0.3rem;    
+    margin-left: 0.7rem;
+}
+
+.formulario__item input:hover {
+    background-color: #faff03;
+}
+
+.formulario__boton {
+    display: flex;
+    justify-content: center;
+    font-family: "donau";
+    font-size: 2rem;
+    font-weight: bold;
+    word-spacing: 0.3rem;
+    text-align: center;
+    color: #000000;
+    background-color: #faff03;
+    border: solid #000000 0.2rem;
+    border-radius: 0.5rem;
+    width: 15rem;  
+    padding: 0.5rem;
+    margin: 0.8rem 8rem;
+    transition: 0.3s;
+}
+
+.formulario__boton:hover {
+    font-size: 2.5rem;
+    color: #5e0870;
+    cursor: pointer;
+}
