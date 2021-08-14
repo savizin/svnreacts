@@ -1,8 +1,9 @@
 import React from "react";
-import "../item/item.css";
 import {Link} from "react-router-dom";
+import "../item/item.css";
 
 function Item ({obra}) {    
+
     return (
     <div className="tarjeta"> 
         <img className="imagenTarj" src={obra.img} alt={obra.nombre}/>
@@ -11,9 +12,10 @@ function Item ({obra}) {
             <small>{obra.medida}</small>
             <small>${obra.precio}</small>
         </div>
-        <button className="botonTarj"><Link to={`/detalleobra/${obra.id}`}>Ver más</Link></button>
+        <Link to={`/detalleobra/${obra.id}`}><button className="botonTarj">Ver más</button></Link>
     </div>
     )
+
 }
 
 export default Item;

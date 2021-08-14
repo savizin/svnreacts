@@ -1,16 +1,21 @@
 import React, { useContext } from "react";
-import "../formulario/formulario.css";
-import firebase from "firebase";
 import {database} from "../../firebase/firebase.jsx";
 import { CartContext } from "../../context/CartContext";
+import firebase from "firebase";
+import "../formulario/formulario.css";
 
 const Formulario = () => {
 
     const {carrito, totalCarrito, limpiarCarrito} = useContext (CartContext);
 
-    const manejarSubmit = (event) => {
-        event.preventDefault();
+    const limpiarFormulario = () => {
+        document.getElementById("formulario").reset();
+    }
 
+    const manejarSubmit = (event) => {
+
+        event.preventDefault();
+        
         const datosComprador = {
             nombre: event.target.nombre.value,
             apellido: event.target.apellido.value,
@@ -25,78 +30,49 @@ const Formulario = () => {
             total: totalCarrito(),
         };
 
-        const ordenes = database.collection("ordenes");
-
-        let ordenId;
+        const ordenes = database.collection("ordenes")
+        const obrasArte = database.collection("obras")
 
         ordenes
-        .add(nuevaOrden)
-        .then((response) => {
-            ordenId = response.id;
-        })
-        .catch((error) => {
-            alert("ERROR: " + error);
-        });
-
-        const obrasElegidas = database.collection("obras")
-        .where(
-            firebase.firestore.FieldPath.documentId(),
-            "in",
-            carrito.map((itemDetail) => itemDetail.id)
-        );
-      
-        obrasElegidas.get().then((query) => {
-
-            const batch = database.batch();
-
-            const obrasSinStock = []; 
-        
-            query.docs.forEach((doc, index) => {
-                if (doc.data().stock >= nuevaOrden.obras[index].quantity) {
-                    batch.update(doc.ref, {
-                    stock: doc.data().stock - nuevaOrden.obras[index].quantity,
-                    });
-                } else {
-                    obrasSinStock.push({ ...doc.data(), id: doc.id });
-                }
+            .add({nuevaOrden})
+            .then((refDoc) => {
+                carrito.map((itemDetail) => {
+                    const decrement = itemDetail.cantidad;
+                    obrasArte.doc(itemDetail.id)
+                        .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
+                })
+                alert ("ORDEN GENERADA CON EXITO! \n ID: " + refDoc.id);
+                limpiarCarrito();
+                limpiarFormulario();
             });
+    }
 
-            {(obrasSinStock.length === 0) ? 
-            (batch.commit().then(() => {
-                alert("ORDEN GENERADA CON EXITO! \n ID: "+ ordenId);
-                limpiarCarrito(); }
-            )) : 
-            (alert("ERROR: Hay obras que ya no cuentan con stock"))};
-
-        });
-
-    };
-  
     return (
-        <form onSubmit={manejarSubmit} className="formulario">
-            <h1 className="formulario__titulo">FORMULARIO DE COMPRA</h1>
-            <h2 className="formulario__subtitulo">Complete los siguientes datos:</h2>
+        <form onSubmit={manejarSubmit} className="formulario" id="formulario">
+            <h1 className="formularioTitulo">FORMULARIO DE COMPRA</h1>
+            <h2 className="formularioSubtitulo">Complete los siguientes datos:</h2>
             <ul>
-                <li className="formulario__item">
+                <li className="formularioItem">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre"/>
                 </li>
-                <li className="formulario__item">
+                <li className="formularioItem">
                     <label for="apellido">Apellido:</label>
                     <input type="text" id="apellido"/>
                 </li>
-                <li className="formulario__item">
+                <li className="formularioItem">
                     <label for="telefono">Teléfono:</label>
                     <input type="tel" id="telefono" placeholder="(código de área)número"/>
                 </li>
-                <li className="formulario__item">
+                <li className="formularioItem">
                     <label for="email">E-mail:</label>
                     <input type="email" id="email"/>
                 </li>
             </ul>
-            <button type="submit" className="formulario__boton">COMPRAR</button>
+            <button type="submit" className="formularioBoton">COMPRAR</button>
         </form>
     )
+
 }
 
 export default Formulario;

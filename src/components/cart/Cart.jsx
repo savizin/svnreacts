@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import ItemCart from "./ItemCart.jsx";
 import "../cart/cart.css";
-import ItemCart from "./ItemCart";
 
 function Cart (props) {
 
@@ -10,31 +10,30 @@ function Cart (props) {
 
     return (
         <div className="cart">
-            <div className="cart__obras">
+            <div className="cartObras">
                 {(!carrito.length) ?         
-                (<div className="cart__sinobras">
-                    <p className="cart__mensaje">No se han añadido productos al carrito</p>
-                    <button className="cart__botoninicio">
-                        <Link to={"/"}>Seguir comprando</Link>
-                    </button>
+                (<div className="cartSinObras">
+                    <p className="cartMensaje">No se han añadido productos al carrito</p>
+                    <Link to={"/"}>
+                        <button className="cartBotonInicio">Seguir comprando</button>
+                    </Link>
                  </div>) : 
                 (<>
-                    <p className="cart__titulo">RESUMEN DE TU COMPRA:</p>
+                    <p className="cartTitulo">RESUMEN DE TU COMPRA:</p>
                     {carrito.map((itemDetail) => <ItemCart key={itemDetail.id} itemDetail={itemDetail}/>)}
-                    <div className="cart__totales">
+                    <div className="cartTotales">
                         <p className="info">Cantidad: {cantidadCarrito()}</p>
                         <p className="info">Total: ${totalCarrito()}</p>
                     </div>
-                    <bottom className="cart__botoncomprar">
-                        <Link to={"/formulario/formulario"}>FINALIZAR COMPRA</Link>
-                    </bottom>
+                    <Link to={"/formulario"}>
+                        <button className="cartBotonComprar">FINALIZAR COMPRA </button>
+                    </Link>
                 </>)                 
                 }
             </div>
         </div>
     );
    
-
 }
 
 export default Cart;

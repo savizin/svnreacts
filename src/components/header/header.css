@@ -10,12 +10,12 @@
     padding: 0.5rem;
 }
   
-.seccion__titulo {
+.seccionTitulo {
     color: #faff03;
     font-size: 0.1rem;
 }
   
-.seccion__subtitulo {
+.seccionSubtitulo {
     font-family: "donau";
     font-size: 4rem;
     font-weight: bold;

@@ -1,21 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import "../contador/contador.css";
 
-function Contador ({contador, setContador}) {
+function Contador ({contador, setContador, inicial, stock}) {
 
     const sumar = () => {
-        contador < 3 && setContador (contador + 1)
+        if (contador < stock) {
+            setContador (contador + 1)
+        }; 
     }
     
     const restar = () => {
-        contador > 1 && setContador (contador - 1);
+        if (contador > inicial) {
+            setContador (contador - 1)
+        }; 
     }
 
     return (
         <div className="contador">
-            <button className="contador__boton" onClick={restar}>-</button>
-            <span className="contador__num">{contador}</span>
-            <button className="contador__boton" onClick={sumar}>+</button>
+            <button className="contadorBoton" onClick={restar}>-</button>
+            <span className="contadorNum">{contador}</span>
+            <button className="contadorBoton" onClick={sumar}>+</button>
         </div>
     )
 }

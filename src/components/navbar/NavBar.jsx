@@ -1,14 +1,15 @@
 import React from "react";
-import "../navbar/navBar.css";
-import LogoNavBar from "./LogoNavBar";
-import Carrito from "../cartwidget/CartWidget.jsx";
 import {NavLink} from "react-router-dom";
+import LogoNavBar from "./LogoNavBar.jsx";
+import Carrito from "../cartwidget/CartWidget.jsx";
+import "../navbar/navBar.css";
 
 const NavBar = () => {
+
     return (
     <nav className="nav">
         <LogoNavBar />
-        <ul className="nav__lista">
+        <ul className="navLista">
             <li><NavLink to={"/"}>Inicio</NavLink></li>
             <li><NavLink to={"/categoria/c1"}>Categoría 1</NavLink></li>
             <li><NavLink to={"/categoria/c2"}>Categoría 2</NavLink></li>
@@ -17,6 +18,7 @@ const NavBar = () => {
         <Carrito  />
     </nav>
     );
+
 }
 
 export default NavBar;

@@ -1,14 +1,14 @@
 import React, { useEffect, useState} from 'react'; 
-import Item from "../item/Item.jsx";
-import {database} from "../../firebase/firebase.jsx";
-import Spiner from "../spiner/Spiner.jsx";
 import { useParams } from 'react-router-dom';
+import {database} from "../../firebase/firebase.jsx";
+import Item from "../item/Item.jsx";
+import Spiner from "../spiner/Spiner.jsx";
 
 const ItemList = () => {  
     
-    const [displayObras, setdisplayObras] = useState ([]);
+    const [displayObras, setdisplayObras] = useState([]);
 
-    const {categoria} = useParams (); 
+    const {categoria} = useParams(); 
 
     const obrasDisponibles = () => {
 
@@ -36,8 +36,8 @@ const ItemList = () => {
     };
 
     useEffect(() => {
-        setdisplayObras ([]);
-        obrasDisponibles () 
+        setdisplayObras([]);
+        obrasDisponibles();
     },[categoria]);
    
     return (

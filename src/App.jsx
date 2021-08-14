@@ -25,10 +25,10 @@ function App() {
             <Route path="/detalleobra/:id">
               <ItemDetailContainer />
             </Route>
-            <Route path="/cart/:cart">
+            <Route path="/carritocompras">
               <Cart />
             </Route>
-            <Route path="/formulario/:formulario">
+            <Route path="/formulario">
               <Formulario />
             </Route>
           </Switch>

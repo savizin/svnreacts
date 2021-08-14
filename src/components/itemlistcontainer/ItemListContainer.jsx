@@ -1,17 +1,18 @@
 import React from "react";
-import "../itemlistcontainer/itemListContainer.css";
 import ItemList from "../item/ItemList.jsx";
+import "../itemlistcontainer/itemListContainer.css";
 
 const Container = (props) => {
 
     return (
-    <div className="ItemListContainer">
+    <div className="itemList">
         <p className="leyenda">{props.leyenda}</p>
         <div className="obras">
             <ItemList/>
         </div>
     </div>
     );
+
 }
 
 export default Container;

@@ -1,6 +1,6 @@
 import React, {createContext, useState} from "react";
 
-export const CartContext = createContext ();
+export const CartContext = createContext();
 
 const CartContextProvider = ({children}) => {
 
@@ -39,12 +39,11 @@ const CartContextProvider = ({children}) => {
     }
 
     const limpiarCarrito = () => {
-        return carrito.clear();
-    }
-
-
+        setCarrito([]);
+    };
+    
     return (
-        <CartContext.Provider value= 
+        <CartContext.Provider value = 
         {{carrito, agregarAlCarrito, eliminarDelCarrito, totalCarrito, cantidadCarrito, totalPrecio, verificarCarrito, editarCarrito, limpiarCarrito}}>
             {children}
         </CartContext.Provider>

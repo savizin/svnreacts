@@ -1,12 +1,11 @@
-
 .contador {
     display:flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem 0rem;
+    margin: 0.8rem 0rem;
 }
 
-.contador__boton {
+.contadorBoton {
     font-family: "donau";
     font-weight: bolder;
     font-size: 1.5rem;
@@ -20,7 +19,7 @@
     padding: 0.1rem;
 }
 
-.contador__num {
+.contadorNum {
     font-size: 1.5rem;
     font-family: "monserrat";
     font-weight: bold;

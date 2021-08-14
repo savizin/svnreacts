@@ -1,4 +1,4 @@
-.carrito__carrito {
+.carrito {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     margin-right: 4rem;
 }
 
-.img__carrito {
+.imgCarrito {
     width: 3rem;
     height: 3rem;
     color: #000000;
@@ -15,12 +15,12 @@
     margin-bottom: 1rem;
 }
 
-.img__carrito:hover {
+.imgCarrito:hover {
     width: 4rem;
     height: 4rem;
 }
 
-.total__carrito {
+.totalCarrito {
     font-family: "donau";
     font-size: 1.5rem;
     font-weight: bolder;

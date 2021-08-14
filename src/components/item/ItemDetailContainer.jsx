@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'; 
-import ItemDetail from "../item/ItemDetail.jsx";
-import { database } from '../../firebase/firebase.jsx';
-import Spiner from '../spiner/Spiner.jsx';
 import { useParams } from 'react-router-dom';
+import { database } from '../../firebase/firebase.jsx';
+import ItemDetail from "../item/ItemDetail.jsx";
+import Spiner from '../spiner/Spiner.jsx';
 
 const ItemDetailContainer = (props) => {
     
-    const [displayObra, setDisplayObra] = useState ({});
+    const [displayObra, setDisplayObra] = useState({});
 
     const {id} = useParams();
 
@@ -25,7 +25,7 @@ const ItemDetailContainer = (props) => {
     };
 
     useEffect(() => {
-        getObrasDetail()
+        getObrasDetail();
     }, [id]);
 
     return (

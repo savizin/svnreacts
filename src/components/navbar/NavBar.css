@@ -6,13 +6,13 @@
     margin: 0.1rem;
 }
    
-.nav__img {
+.navImg {
     width: 10rem;
     height: 10rem;
     margin-left: 0.5rem;
 }
 
-.nav__lista {
+.navLista {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,8 +31,9 @@ a:-webkit-any-link {
 }
 
 a:-webkit-any-link:hover {
-    color: #5e0870;
+    font-size: 2.2rem;
     font-weight: bold;
+    color: #5e0870;
 }
 
 

@@ -10,6 +10,7 @@ const Spiner = () => {
             <div className="bounce3"></div>
         </div>
     )
+    
 }
 
 export default Spiner;

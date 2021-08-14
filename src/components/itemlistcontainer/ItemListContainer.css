@@ -1,4 +1,4 @@
-.ItemListContainer {
+.itemList {
     position: absolute;
     top: 16rem;
     width: 100%;
@@ -13,24 +13,11 @@
     margin: 0.5rem;
 }
 
-.contador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .obras {
     display: grid;
-    grid-template-columns: 27rem 27rem 27rem;
+    grid-template-columns: 25rem 25rem 25rem;
     grid-template-rows: repeat (40rem);
     justify-content: center;
     gap: 1%;
     margin: 2rem 0rem;
-}
-
-.obrasDetail {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3rem;
 }

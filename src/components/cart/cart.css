@@ -3,29 +3,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-color: #ff5403;
+    background-color: #f8f3b1;
     border: solid #000000 0.2rem;
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 0.5rem #000000;
     padding: 1rem 3rem;
-    margin: 5rem 20rem;   
+    margin: 5rem 18rem;   
 }
 
-.cart__titulo {
+.cartTitulo {
     font-family: "donau";
     font-size: 3rem;
     font-weight: bold;
 }
 
-.cart__obras {
+.cartObras {
     width: 100%;
     margin: 0.3rem;
 }
 
-.cart__totales {
+.cartTotales {
     display: flex;
     padding: 0.5rem;
-    margin: 0.5rem 5rem;
+    margin: 0.5rem 7rem;
 }
 
 .info {
@@ -35,14 +35,14 @@
     margin: 0rem 2rem 0rem 2rem;
 }
 
-.cart__sinobras{
+.cartSinObras{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.cart__mensaje {
+.cartMensaje {
     font-family: "monserrat";
     font-size: 1.8rem;
     font-weight: bolder;
@@ -52,9 +52,10 @@
     margin: 1rem;
 }
 
-.cart__botoninicio {
+.cartBotonInicio {
     font-family: "monserrat";
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
     color: #000000;
     background-color: #faff03;
     border: solid #000000 0.2rem;
@@ -65,20 +66,21 @@
     transition: 0.3s;
 }
 
-.cart__botoninicio:hover {
-    font-size: 1.5rem;
+.cartBotonInicio:hover {
+    font-size: 1.7rem;
+    cursor: pointer;
 }
 
-.itemcart {
+.itemCart {
     display: grid;
-    grid-template-columns: 10rem 20rem 7rem;
+    grid-template-columns: 10rem 24rem 7rem;
     justify-content: flex-start;
     align-items: center;
     padding: 0.1rem;
     margin: 0.1rem;
 }
 
-.itemcart__img {
+.itemCartImg {
     display: grid;
     grid-column: 1;
     width: 7rem;
@@ -86,7 +88,7 @@
     margin: 0.5rem 1.5rem;
 }
 
-.itemcart__descripcion {
+.itemCartDescripcion {
     display: grid;
     grid-column: 2;
     font-family: "monserrat";
@@ -95,14 +97,14 @@
     margin: 0.5rem;
 }
 
-.itemcart__borrar {
+.itemCartBorrar {
     display: grid;
     grid-column: 3;
     justify-content: flex-end;
     margin-left: 2rem;
 }
 
-.itemcart__borrar--tacho {
+.itemCartTacho {
     width: 2rem;
     height: 2rem;
     color: #ff0303;
@@ -112,13 +114,14 @@
     margin: 0.5rem 3rem;
 }
 
-.itemcart__borrar--tacho:hover {
-    width: 3rem;
-    height: 3rem;
+.itemCartTacho:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
     padding: 0.1rem;
 }
 
-.cart__botoncomprar {
+.cartBotonComprar {
     display: flex;
     justify-content: center;
     font-family: "donau";
@@ -127,15 +130,17 @@
     word-spacing: 0.3rem;
     text-align: center;
     color: #000000;
-    background-color: #faff03;
+    background-color: #ff5e03;
     border: solid #000000 0.2rem;
-    border-radius: 0.5rem;  
+    border-radius: 0.5rem; 
+    width: 25rem; 
     padding: 0.5rem;
     margin: 0.8rem 8rem;
     transition: 0.3s;
 }
 
-.cart__botoncomprar:hover {
+.cartBotonComprar:hover {
     font-size: 3rem;
+    box-shadow: 0.7rem 0.7rem 0.7rem #000000;
     cursor: pointer;
 }

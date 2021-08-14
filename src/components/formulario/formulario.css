@@ -9,10 +9,10 @@
     box-shadow: 0.5rem 0.5rem 0.5rem #000000;
     font-family: "monserrat";
     padding: 1rem 3rem;
-    margin: 5rem 20rem;  
+    margin: 5rem 22rem;  
 }
 
-.formulario__titulo { 
+.formularioTitulo { 
     font-family: "donau";
     font-size: 3rem;
     color: #000000;
@@ -21,16 +21,16 @@
     margin: 0.5rem;
 }
 
-.formulario__subtitulo {
+.formularioSubtitulo {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     font-size: 1.8rem;
     color: #000000;
-    margin: 0.3rem;
+    margin: 0.5rem;
 }
 
-.formulario__item {
+.formularioItem {
     display: flex;
     justify-content: flex-end;
     font-size: 1.5rem;
@@ -38,7 +38,7 @@
     margin: 1.2rem;
 }
 
-.formulario__item input {   
+.formularioItem input {   
     font-size: 1.3rem;
     width: 20rem;
     border: solid #000000 0.1rem;
@@ -47,16 +47,16 @@
     margin-left: 0.7rem;
 }
 
-.formulario__item input:hover {
+.formularioItem input:hover {
     background-color: #faff03;
 }
 
-.formulario__boton {
+.formularioBoton {
     display: flex;
     justify-content: center;
     font-family: "donau";
-    font-size: 2rem;
     font-weight: bold;
+    font-size: 2rem;
     word-spacing: 0.3rem;
     text-align: center;
     color: #000000;
@@ -69,8 +69,7 @@
     transition: 0.3s;
 }
 
-.formulario__boton:hover {
+.formularioBoton:hover {
     font-size: 2.5rem;
-    color: #5e0870;
     cursor: pointer;
 }
