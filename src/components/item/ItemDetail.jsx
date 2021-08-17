@@ -2,6 +2,7 @@ import React, {useContext, useState} from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import Contador from "../contador/Contador";
+import swal from 'sweetalert';
 import "../item/itemDetail.css";
 
 function ItemDetail ({itemDetail}) {
@@ -20,6 +21,7 @@ const {agregarAlCarrito, editarCarrito, verificarCarrito} = useContext(CartConte
         else {
             agregarAlCarrito({...itemDetail, cantidad: contador})
         };
+        swal({title: "OBRA AGREGADA AL CARRITO"})
     }
 
     return (

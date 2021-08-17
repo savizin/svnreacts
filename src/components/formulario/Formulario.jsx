@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import {database} from "../../firebase/firebase.jsx";
-import { CartContext } from "../../context/CartContext";
+import { CartContext } from "../../context/CartContext"
+import { useHistory } from "react-router-dom";
+import swal from 'sweetalert';
 import firebase from "firebase";
 import "../formulario/formulario.css";
 
@@ -41,10 +43,18 @@ const Formulario = () => {
                     obrasArte.doc(itemDetail.id)
                         .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
                 })
-                alert ("ORDEN GENERADA CON EXITO! \n ID: " + refDoc.id);
+
+                let idOrden = refDoc.id
+                swal({
+                    title: "¡ORDEN GENERADA CON ÉXITO!",
+                    text: "ID: " + idOrden,
+                    icon: "success",
+                    button: "VER COMPROBANTE",
+                });           
                 limpiarCarrito();
                 limpiarFormulario();
             });
+
     }
 
     return (

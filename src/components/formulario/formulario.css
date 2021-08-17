@@ -73,3 +73,48 @@
     font-size: 2.5rem;
     cursor: pointer;
 }
+
+/*modificación del alerta*/
+.swal-title {
+    color: #000000;
+    font-family: "donau";
+    padding: 1.3rem 1.6rem;
+    font-size: 2.5rem;
+}
+
+.swal-text {
+    font-family: "monserrat";    
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    color: #000000;
+    max-width: calc(100% - 2rem);
+}
+
+.swal-button-container {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.swal-button {   
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000000;
+    background-color: #faff03;
+    border-radius: 2rem;
+    box-shadow: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.swal-button:not([disabled]):hover {
+    font-size: 1.3rem;
+    background-color: #ff5403;
+}
+
+
+    
+    
