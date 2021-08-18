@@ -1,9 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {database} from "../../firebase/firebase.jsx";
+import {CartContext} from "../../context/CartContext";
 import Spiner from "../spiner/Spiner.jsx";
 import "../ordencompra/orden.css";
 
-const Orden = (nuevaOrden) => {
+const Orden = ({itemDetail}) => {
+
+const {totalCarrito, cantidadCarrito} = useContext(CartContext);
 
 const [displayOrden, setdisplayOrden] = useState([]);
 
@@ -26,7 +29,7 @@ useEffect(() => {
 }, []);
 
     return (
-    <>  {displayOrden.length ?
+    <>  {displayOrden[displayOrden.length - 1] ?
         (displayOrden.map((ordenGenerada) => ( 
             <>
                 <strong className="tituloOrden">ORDEN DE COMPRA Nº {ordenGenerada.id}</strong>
@@ -45,8 +48,8 @@ useEffect(() => {
                         <small>Cantidad: </small>
                     </div>
                     <div className="ordenTotales">
-                        <p>Cantidad total: {}</p>
-                        <p>Total: ${}</p>
+                        <p>Cantidad total: {cantidadCarrito()}</p>
+                        <p>Total: ${totalCarrito()}</p>
                     </div>
                 </div>
             </>))) : <Spiner />}
