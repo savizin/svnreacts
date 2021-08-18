@@ -10,6 +10,8 @@ const Formulario = () => {
 
     const {carrito, totalCarrito, limpiarCarrito} = useContext (CartContext);
 
+    let history = useHistory();
+
     const limpiarFormulario = () => {
         document.getElementById("formulario").reset();
     }
@@ -49,12 +51,11 @@ const Formulario = () => {
                     title: "¡ORDEN GENERADA CON ÉXITO!",
                     text: "ID: " + idOrden,
                     icon: "success",
-                    button: "VER COMPROBANTE",
                 });           
                 limpiarCarrito();
                 limpiarFormulario();
+                history.push("/ordencompra");
             });
-
     }
 
     return (

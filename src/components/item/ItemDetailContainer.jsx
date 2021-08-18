@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'; 
 import { useParams } from 'react-router-dom';
 import { database } from '../../firebase/firebase.jsx';
+import swal from 'sweetalert';
 import ItemDetail from "../item/ItemDetail.jsx";
 import Spiner from '../spiner/Spiner.jsx';
 
@@ -19,7 +20,7 @@ const ItemDetailContainer = (props) => {
             if (doc.exists) {
                 setDisplayObra ({...doc.data(), id: doc.id})
             } else {
-                alert ("Error en la consulta");
+                swal({title: "ERROR EN LA CONSULTA"})
             }
         });
     };

@@ -1,28 +1,55 @@
-import React, { useContext } from "react";
+import React, {useEffect, useState} from "react";
 import {database} from "../../firebase/firebase.jsx";
-import { CartContext } from "../../context/CartContext";
+import Spiner from "../spiner/Spiner.jsx";
 import "../ordencompra/orden.css";
 
-const Orden = ({itemDetail}) => {
+const Orden = (nuevaOrden) => {
 
-const {cantidadCarrito, totalCarrito} = useContext (CartContext);
+const [displayOrden, setdisplayOrden] = useState([]);
+
+const ordenCompra = () => {
+
+    const ordenGenerada = database.collection ("ordenes") 
+          
+    ordenGenerada
+      .get().then ((query) => 
+        setdisplayOrden (
+          query.docs.map((doc) => {
+            return {...doc.data(), id: doc.id};
+          })
+        ));
+    }
+
+useEffect(() => {
+    setdisplayOrden([]);
+    ordenCompra();
+}, []);
 
     return (
-    <>
-        <strong className="tituloOrden">ORDEN DE COMPRA Nº </strong>
-        <div className="cuerpoOrden">
-            <img className="ordenImg" src={itemDetail.img} alt="itemDetail"/>
-            <div className="ordenDescripcion">
-                <small>Obra: "{itemDetail.nombre}"</small>
-                <small>Medida: {itemDetail.medida}</small>
-                <small>Precio: ${itemDetail.precio}</small>
-                <small>Cantidad: {itemDetail.cantidad}</small>
-            </div>
-            <div className="datos">
-                <p className="datosCantidad">Cantidad: {cantidadCarrito()}</p>
-                <p className="datosTotal">Total: ${totalCarrito()}</p>
-            </div>
-        </div>
+    <>  {displayOrden.length ?
+        (displayOrden.map((ordenGenerada) => ( 
+            <>
+                <strong className="tituloOrden">ORDEN DE COMPRA Nº {ordenGenerada.id}</strong>
+                <div className="cuerpoOrden">
+                    <div className="ordenComprador">
+                        <small>Nombre: </small>
+                        <small>Apellido: </small>
+                        <small>Teléfono: </small>
+                        <small>Correo electrónico: </small>
+                    </div>
+                    <div className="ordenObra">
+                        <img className="ordenObraImg" src={""} alt="imagen obra"/>
+                        <small>Obra: </small>
+                        <small>Medida: </small>
+                        <small>Precio: </small>
+                        <small>Cantidad: </small>
+                    </div>
+                    <div className="ordenTotales">
+                        <p>Cantidad total: {}</p>
+                        <p>Total: ${}</p>
+                    </div>
+                </div>
+            </>))) : <Spiner />}
     </>
     )
 
