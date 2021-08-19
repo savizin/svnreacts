@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 import firebase from "firebase";
 import "../formulario/formulario.css";
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const {carrito, totalCarrito, limpiarCarrito} = useContext (CartContext);
 
@@ -46,15 +46,14 @@ const Formulario = () => {
                         .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
                 })
 
-                let idOrden = refDoc.id
                 swal({
                     title: "¡ORDEN GENERADA CON ÉXITO!",
-                    text: "ID: " + idOrden,
-                    icon: "success",
-                });           
+                    text: "ID: " + refDoc.id,
+                });
+                           
                 limpiarCarrito();
                 limpiarFormulario();
-                history.push("/ordencompra");
+                history.push(`/ordencompra/${refDoc.id}`);
             });
     }
 

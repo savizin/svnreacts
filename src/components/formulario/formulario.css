@@ -75,6 +75,11 @@
 }
 
 /*modificación del alerta*/
+.swal-modal {
+    width: 34rem;
+    background-color: #f8f3b1;
+}
+
 .swal-title {
     color: #000000;
     font-family: "donau";
@@ -101,7 +106,7 @@
     font-weight: 600;
     font-size: 1rem;
     color: #000000;
-    background-color: #faff03;
+    background-color: #ff5403;
     border-radius: 2rem;
     box-shadow: none;
     padding: 1rem 2rem;
@@ -112,7 +117,8 @@
 
 .swal-button:not([disabled]):hover {
     font-size: 1.3rem;
-    background-color: #ff5403;
+    color: #ffffff;
+    background-color: #5e0870;
 }
 
 

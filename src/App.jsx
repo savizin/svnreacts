@@ -32,7 +32,7 @@ function App() {
             <Route path="/formulario">
               <Formulario />
             </Route>
-            <Route path="/ordencompra">
+            <Route path="/ordencompra/:idOrden">
               <Orden />
             </Route>
           </Switch>

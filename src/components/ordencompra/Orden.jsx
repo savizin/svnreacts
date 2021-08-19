@@ -1,61 +1,42 @@
-import React, {useEffect, useState, useContext} from "react";
+import React, {useEffect, useState} from "react";
 import {database} from "../../firebase/firebase.jsx";
-import {CartContext} from "../../context/CartContext";
+import { useParams } from "react-router-dom";
 import Spiner from "../spiner/Spiner.jsx";
+import swal from 'sweetalert';
 import "../ordencompra/orden.css";
+import DetalleOrden from "./Detalleorden.jsx";
 
-const Orden = ({itemDetail}) => {
-
-const {totalCarrito, cantidadCarrito} = useContext(CartContext);
+const Orden = (props) => {
 
 const [displayOrden, setdisplayOrden] = useState([]);
 
-const ordenCompra = () => {
+const {idOrden} = useParams();
 
-    const ordenGenerada = database.collection ("ordenes") 
-          
-    ordenGenerada
-      .get().then ((query) => 
-        setdisplayOrden (
-          query.docs.map((doc) => {
-            return {...doc.data(), id: doc.id};
-          })
-        ));
+    const ordenCompra = () => {
+
+        const ordenGenerada = database
+        .collection ("ordenes") 
+        .doc (idOrden)
+    
+        ordenGenerada.get().then ((doc) => {
+            if (doc.exists) {
+                setdisplayOrden ({...doc.data(), id: doc.id})
+            } else {
+                swal({title: "ERROR EN LA CONSULTA"})
+            }
+        });        
     }
 
 useEffect(() => {
-    setdisplayOrden([]);
     ordenCompra();
-}, []);
+}, [idOrden]);
 
     return (
-    <>  {displayOrden[displayOrden.length - 1] ?
-        (displayOrden.map((ordenGenerada) => ( 
-            <>
-                <strong className="tituloOrden">ORDEN DE COMPRA Nº {ordenGenerada.id}</strong>
-                <div className="cuerpoOrden">
-                    <div className="ordenComprador">
-                        <small>Nombre: </small>
-                        <small>Apellido: </small>
-                        <small>Teléfono: </small>
-                        <small>Correo electrónico: </small>
-                    </div>
-                    <div className="ordenObra">
-                        <img className="ordenObraImg" src={""} alt="imagen obra"/>
-                        <small>Obra: </small>
-                        <small>Medida: </small>
-                        <small>Precio: </small>
-                        <small>Cantidad: </small>
-                    </div>
-                    <div className="ordenTotales">
-                        <p>Cantidad total: {cantidadCarrito()}</p>
-                        <p>Total: ${totalCarrito()}</p>
-                    </div>
-                </div>
-            </>))) : <Spiner />}
-    </>
-    )
-
+        <>{(Object.entries(displayOrden).length !== 0) ? 
+          (<DetalleOrden ordenGenerada={displayOrden}/>) : 
+          (<Spiner/>)}
+        </>
+    );
 }
 
 export default Orden;
