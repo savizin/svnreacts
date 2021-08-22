@@ -30,11 +30,11 @@ const ItemDetailContainer = (props) => {
     }, [id]);
 
     return (
-        <>
+    <>
         {(Object.entries(displayObra).length !== 0) ? 
         (<ItemDetail itemDetail={displayObra}/>) : 
         (<Spiner/>)}
-        </> 
+    </> 
     );
 
 }

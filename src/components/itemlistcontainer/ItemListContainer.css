@@ -1,7 +1,6 @@
 .itemList {
-    position: absolute;
-    top: 16rem;
     width: 100%;
+    margin: 5rem 0rem 7rem 0rem;
 }
     
 .leyenda {

@@ -1,6 +1,6 @@
 .spinner {
     position: absolute;
-    top: 16rem;
+    top: 20rem;
     width: 95%;
     text-align: center;
     margin: 2rem;    
@@ -17,13 +17,13 @@
 }
   
 .spinner .bounce1 {
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.4s;
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
 }
   
 .spinner .bounce2 {
-    -webkit-animation-delay: -0.16s;
-    animation-delay: -0.16s;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
 }
   
 @-webkit-keyframes sk-bouncedelay {

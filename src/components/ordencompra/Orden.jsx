@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {database} from "../../firebase/firebase.jsx";
 import { useParams } from "react-router-dom";
+import DetalleOrden from "./Detalleorden.jsx";
 import Spiner from "../spiner/Spiner.jsx";
 import swal from 'sweetalert';
-import "../ordencompra/orden.css";
-import DetalleOrden from "./Detalleorden.jsx";
 
 const Orden = (props) => {
 
@@ -32,9 +31,10 @@ useEffect(() => {
 }, [idOrden]);
 
     return (
-        <>{(Object.entries(displayOrden).length !== 0) ? 
-          (<DetalleOrden ordenGenerada={displayOrden}/>) : 
-          (<Spiner/>)}
+        <>
+            {(Object.entries(displayOrden).length !== 0) ? 
+            (<DetalleOrden ordenGenerada={displayOrden}/>) : 
+            (<Spiner/>)}
         </>
     );
 }

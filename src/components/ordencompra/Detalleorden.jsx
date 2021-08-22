@@ -1,31 +1,37 @@
 import React from "react";
-import "../ordencompra/orden.css";
+import "../ordencompra/detalleorden.css";
 
 const DetalleOrden = ({ordenGenerada}) => {
 
     return (
-        <>
+        <div className="orden">
             <strong className="tituloOrden">ORDEN DE COMPRA Nº {ordenGenerada.id}</strong>
             <div className="cuerpoOrden">
-                <div className="ordenComprador">Datos comprador:
-                    <small>Nombre: </small>
-                    <small>Apellido: </small>
-                    <small>Teléfono: </small>
-                    <small>Correo electrónico: </small>
+                <div className="ordenComprador">
+                    <span>Datos comprador:</span>
+                    <small className="datos">Nombre: {ordenGenerada.nuevaOrden.comprador.nombre}</small>
+                    <small className="datos">Apellido: {ordenGenerada.nuevaOrden.comprador.apellido}</small>
+                    <small className="datos">Teléfono: {ordenGenerada.nuevaOrden.comprador.telefono}</small>
+                    <small className="datos">Correo electrónico: {ordenGenerada.nuevaOrden.comprador.email}</small>
                 </div>
-                <div className="ordenObra">Datos obra:
-                    <img className="ordenObraImg" src={""} alt="imagen obra"/>
-                    <small>Obra: </small>
-                    <small>Medida: </small>
-                    <small>Precio: </small>
-                    <small>Cantidad: </small>
+                <div className="ordenObra">
+                    <span>Datos Obras:</span>
+                    {ordenGenerada.nuevaOrden.obras.map
+                    (dato => (
+                        <div className="ordenDetalle1">   
+                            <small className="datosTitulo">Obra: {dato.nombre}</small>
+                            <small className="datos">Medida: {dato.medida}</small>
+                            <small className="datos">Precio: ${dato.precio}</small>
+                            <small className="datos">Cantidad: {dato.cantidad}</small>
+                        </div>
+                    ))}
                 </div>
                 <div className="ordenTotales">
-                    <p>Cantidad total: </p>
-                    <p>Total: $</p>
+                    <p>Total: ${ordenGenerada.nuevaOrden.total}</p>
                 </div>
             </div>
-        </>
+            <strong className="pieOrden">¡GRACIAS POR TU COMPRA!</strong>
+        </div>
     );
 }
 
