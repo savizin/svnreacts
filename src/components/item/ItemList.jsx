@@ -43,7 +43,8 @@ const ItemList = () => {
     return (
     <>
         {displayObras.length ? 
-        (displayObras.map((obra) => (<Item key={obra.id} obra={obra}/>))) : (<Spiner />)
+        (displayObras.map((obra) => (<Item key={obra.id} obra={obra}/>))) : 
+        (<Spiner />)
         }
     </>
     );

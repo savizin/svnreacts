@@ -9,7 +9,7 @@
     background-color: #f8f3b1;
     width: 30rem;
     height: 41rem;
-    margin: 5rem 25rem 3rem 25rem;
+    margin: 5rem 26rem 3rem 26rem;
 }
 
 .imagenDetail {
@@ -58,4 +58,9 @@
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
+}
+
+.spiner {
+    padding: 8rem 0rem;
+    margin: 8rem 0rem;
 }

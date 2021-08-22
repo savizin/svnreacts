@@ -19,10 +19,10 @@ function App() {
         <Header/>
           <Switch>
             <Route exact path="/">
-              <ItemListContainer leyenda="Obras de arte disponible para su compra"/>
+              <ItemListContainer leyenda="Obras de arte disponibles para su compra"/>
             </Route> 
             <Route path="/categoria/:categoria">
-              <ItemListContainer leyenda="Obras de arte disponible para su compra"/>
+              <ItemListContainer leyenda="Obras de arte disponibles para su compra"/>
             </Route>
             <Route path="/detalleobra/:id">
               <ItemDetailContainer />

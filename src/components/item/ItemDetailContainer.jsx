@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'; 
 import { useParams } from 'react-router-dom';
 import { database } from '../../firebase/firebase.jsx';
-import swal from 'sweetalert';
 import ItemDetail from "../item/ItemDetail.jsx";
+import swal from 'sweetalert';
 import Spiner from '../spiner/Spiner.jsx';
+import "../item/itemDetail.css";
 
 const ItemDetailContainer = (props) => {
     
@@ -33,7 +34,7 @@ const ItemDetailContainer = (props) => {
     <>
         {(Object.entries(displayObra).length !== 0) ? 
         (<ItemDetail itemDetail={displayObra}/>) : 
-        (<Spiner/>)}
+        (<div className="spiner"><Spiner/></div>)}
     </> 
     );
 

@@ -17,13 +17,13 @@
 }
   
 .spinner .bounce1 {
-    -webkit-animation-delay: -0.8s;
-    animation-delay: -0.8s;
+    -webkit-animation-delay: -10.9s;
+    animation-delay: -0.52s;
 }
   
 .spinner .bounce2 {
-    -webkit-animation-delay: -0.5s;
-    animation-delay: -0.5s;
+    -webkit-animation-delay: -10.9s;
+    animation-delay: -0.52s;
 }
   
 @-webkit-keyframes sk-bouncedelay {
