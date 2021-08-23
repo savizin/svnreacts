@@ -3,6 +3,8 @@ El proyecto consiste en la creación de un e-commerce para la venta de obras de 
 Todas las obras son pintadas a mano en acrílico, caracterizadas por el color y su originalidad.
 Están destinadas a ambientar y decorar cualquier espacio. 
 
+![Git del proyecto](D:\Doc_Savina\Videos\SVN-Arteencolores.gif)
+
 ## E-COMMERCE
 Para el desarrollo de esta web se utilizó: 
 - Node JS
@@ -17,7 +19,7 @@ Para el desarrollo de esta web se utilizó:
 - Renderizados condicionales 
 - Firebase con colección para las obras y colección para las órdenes de compra
 
- ### Todo esto por medio del programa Visual Estudio Code en conjunto con Microsoft Edge y la consola con Github.
+### Todo esto por medio del programa Visual Estudio Code en conjunto con Microsoft Edge y la consola con Github.
 
 ### El repositorio final se encuentra en Netlify.
 
