@@ -3,7 +3,7 @@ El proyecto consiste en la creación de un e-commerce para la venta de obras de 
 Todas las obras son pintadas a mano en acrílico, caracterizadas por el color y su originalidad.
 Están destinadas a ambientar y decorar cualquier espacio. 
 
-![Git del proyecto](https://media.giphy.com/media/HdmL2CiLnOgC61El3r/giphy.gif)
+![Git del proyecto](<div style="width:100%;height:0;padding-bottom:49%;position:relative;"><iframe src="https://giphy.com/embed/BFYSpKjUXUlhdzcV22" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/BFYSpKjUXUlhdzcV22">via GIPHY</a></p>)
 
 ## E-COMMERCE
 Para el desarrollo de esta web se utilizó: 
