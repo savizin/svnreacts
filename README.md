@@ -3,7 +3,7 @@ El proyecto consiste en la creación de un e-commerce para la venta de obras de 
 Todas las obras son pintadas a mano en acrílico, caracterizadas por el color y su originalidad.
 Están destinadas a ambientar y decorar cualquier espacio. 
 
-![](D:\Doc_Savina\Documents\DESARROLLO FULL STACK\REACTS\proyecto-zinminosavina\svnarteencolores\src\SVN-Arteencolores.gif)
+![Git del proyecto](https://media.giphy.com/media/HdmL2CiLnOgC61El3r/giphy.gif)
 
 ## E-COMMERCE
 Para el desarrollo de esta web se utilizó: 
