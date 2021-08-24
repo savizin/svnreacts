@@ -34,6 +34,7 @@ const Formulario = (props) => {
             total: totalCarrito(),
         };
 
+        //Utilización de firebase
         const ordenes = database.collection("ordenes")
         const obrasArte = database.collection("obras")
 
@@ -53,6 +54,8 @@ const Formulario = (props) => {
                            
                 limpiarCarrito();
                 limpiarFormulario();
+                //Utilizo el useHistory para traer el id del formulario y sus datos
+                //y luego colocarlos en la orden de compra
                 history.push(`/ordencompra/${refDoc.id}`);
             });
     }

@@ -9,10 +9,12 @@ const Orden = (props) => {
 
 const [displayOrden, setdisplayOrden] = useState([]);
 
+//Por medio de useParams tomo el id de la orden de compra
 const {idOrden} = useParams();
 
     const ordenCompra = () => {
 
+        //Utilización de firebase
         const ordenGenerada = database
         .collection ("ordenes") 
         .doc (idOrden)

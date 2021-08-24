@@ -145,3 +145,168 @@
     box-shadow: 0.7rem 0.7rem 0.7rem #000000;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .cart {
+        margin: 5rem 4rem;   
+    }
+    
+    .cartTitulo {
+        font-size: 2.5rem;
+    }
+    
+    .cartObras {
+        margin: 0.1rem;
+    }
+    
+    .cartTotales {
+        padding: 0.3rem;
+        margin: 0.3rem 1rem;
+    }
+    
+    .info {
+        margin: 0rem 1rem;
+    }
+    
+    .cartMensaje {
+        font-size: 1.5rem;
+    }
+    
+    .cartBotonInicio {
+        font-size: 1.3rem;
+        width: 18rem;
+    }
+    
+    .cartBotonInicio:hover {
+        font-size: 1.5rem;
+    }
+    
+    .itemCart {
+        grid-template-columns: 8rem 20rem 6rem;
+        margin: 0.5rem 0rem;
+    }
+    
+    .itemCartImg {
+        width: 8rem;
+        height: 8rem;
+        margin: 0.5rem 0.5rem;
+    }
+    
+    .itemCartDescripcion {
+        font-size: 1.3rem;
+        padding: 1rem;
+        margin: 0.3rem;
+    }
+    
+    .itemCartBorrar {
+        margin-left: 1rem;
+    }
+    
+    .itemCartTacho {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    
+    .itemCartTacho:hover {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .cartBotonComprar {
+        font-size: 2rem;
+        width: 20rem; 
+        margin: 0.8rem 7rem;
+    }
+    
+    .cartBotonComprar:hover {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .cart {
+        padding: 0.5rem 0.1rem;
+        margin: 5rem 1rem 0rem 1rem;   
+    }
+      
+    .cartTitulo {
+        font-size: 2rem;
+        margin-left: 0.3rem;
+    }
+
+    .cartObras {
+        width: 100%;
+        margin: 0.1rem;
+    }
+
+    .cartTotales {
+        display: flex;
+        justify-content: center;
+        padding: 0.2rem;
+        margin: 0.5rem 0.2rem;
+    }
+
+    .info {
+        font-size: 1rem;
+        margin: 0rem 0.7rem;
+    }
+
+    .cartMensaje {
+        font-size: 1.3rem;
+        margin: 0.5rem;
+    }
+
+    .cartBotonInicio {
+        font-size: 1.1rem;
+        width: 15rem;
+    }
+
+    .cartBotonInicio:hover {
+        font-size: 1.3rem;
+    }
+
+    .itemCart {
+        grid-template-columns: 4rem 12rem 2rem;
+        padding: 0.1rem;
+        margin: 0.1rem;
+    }
+
+    .itemCartImg {
+        width: 4rem;
+        height: 4rem;
+        margin: 0.5rem;
+    }
+
+    .itemCartDescripcion {
+        font-size: 1rem;
+        padding: 1rem;
+        margin: 0.2rem;
+    }
+
+    .itemCartBorrar {
+        margin-left: 1rem;
+    }
+
+    .itemCartTacho {
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0.1rem;
+    }
+
+    .itemCartTacho:hover {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .cartBotonComprar {
+        font-size: 1.5rem;
+        width: 14rem; 
+        padding: 0.3rem;
+        margin: 0.8rem 1.7rem;
+    }
+
+    .cartBotonComprar:hover {
+        font-size: 1.8rem;
+        box-shadow: 0.7rem 0.7rem 0.7rem #000000;
+    }
+}

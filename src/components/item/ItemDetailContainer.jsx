@@ -12,6 +12,7 @@ const ItemDetailContainer = (props) => {
 
     const {id} = useParams();
 
+    //Utilización de firebase
     const getObrasDetail = () => {
         const obraDetalle = database
         .collection("obras")

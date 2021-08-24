@@ -32,3 +32,47 @@
     height: 2rem;
     border-radius: 50%;
 }
+
+@media (max-width: 768px) {   
+    .carrito {
+        margin-right: 1rem;
+    }
+
+    .imgCarrito {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .imgCarrito:hover {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .totalCarrito {
+        font-size: 1.3rem;
+        width: 1.5rem;
+        height: 1.8rem;
+    }
+}
+
+@media (max-width: 320px) {   
+    .carrito {
+        margin-right: 0.3rem;
+    }
+
+    .imgCarrito {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .imgCarrito:hover {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .totalCarrito {
+        font-size: 1.2rem;
+        width: 1.3rem;
+        height: 1.6rem;
+    }
+}

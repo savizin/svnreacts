@@ -3,6 +3,7 @@ import "../ordencompra/detalleorden.css";
 
 const DetalleOrden = ({ordenGenerada}) => {
 
+    //Creación del formulario de la orden de compra
     return (
         <div className="orden">
             <strong className="tituloOrden">ORDEN DE COMPRA Nº {ordenGenerada.id}</strong>

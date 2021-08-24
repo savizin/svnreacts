@@ -3,7 +3,7 @@ El proyecto consiste en la creación de un e-commerce para la venta de obras de 
 Todas las obras son pintadas a mano en acrílico, caracterizadas por el color y su originalidad.
 Están destinadas a ambientar y decorar cualquier espacio. 
 
-[Imgur](https://imgur.com/W37FWNW)
+[GIF DEL PROYECTO](https://imgur.com/W37FWNW)
 
 ## E-COMMERCE
 Para el desarrollo de esta web se utilizó: 

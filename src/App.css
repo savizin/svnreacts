@@ -18,3 +18,9 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+@media (max-width: 768px) {
+  #root {
+    display: inline;
+  }
+}

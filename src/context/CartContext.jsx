@@ -4,6 +4,7 @@ export const CartContext = createContext();
 
 const CartContextProvider = ({children}) => {
 
+    //Creación del estado carrito para su modificación mediante diferentes funciones
     const [carrito, setCarrito] = useState ([]);
 
     const agregarAlCarrito = (itemDetail) => {         

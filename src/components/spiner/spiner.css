@@ -40,3 +40,13 @@
       transform: scale(1.0);
     }
 }
+
+@media (max-width: 768px) {
+    .spinner {
+        position: absolute;
+        top: 14rem;
+        width: 95%;
+        text-align: center;
+        margin: 2rem;    
+    }
+}

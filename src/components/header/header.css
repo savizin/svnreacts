@@ -22,3 +22,32 @@
     color: #000000;
     letter-spacing: 2rem;
 }
+
+@media (max-width: 768px) {
+    .seccion {
+        top: 5.5rem;
+    }
+      
+    .seccionSubtitulo {
+        font-size: 3rem;
+        margin-left: 1rem;
+    }    
+}
+
+
+@media (max-width: 320px) {
+    .seccion {
+        top: 7rem;
+    }
+
+    .seccionTitulo {
+        color: #faff03;
+        font-size: 0.01rem;
+    }
+      
+    .seccionSubtitulo {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        margin-left: 1rem;
+    }    
+}

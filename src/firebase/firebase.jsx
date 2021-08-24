@@ -2,7 +2,7 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  //OBJETO DE FIREBASE
+  //Objeto de Firebase
   apiKey: "AIzaSyBhh4H24XD_q7NAvMSz3eN35brvmpGvkjQ",
   authDomain: "react-svn-arteencolores.firebaseapp.com",
   projectId: "react-svn-arteencolores",

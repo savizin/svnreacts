@@ -12,6 +12,7 @@ const ItemList = () => {
 
     const obrasDisponibles = () => {
 
+        //Utilización de firebase
         const obras = database.collection ("obras") 
               
         if (categoria) {

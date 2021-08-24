@@ -64,3 +64,42 @@
     padding: 8rem 0rem;
     margin: 8rem 0rem;
 }
+
+@media (max-width: 768px) {
+    .tarjetaDetail {
+        width: 28rem;
+        height: 40rem;
+        margin: 5rem 10rem 3rem 10rem;
+    }
+    
+    .imagenDetail {
+        width: 20rem;
+        height: 20rem;
+        margin: 0.3rem;
+    }
+    
+    .textoDetail {    
+        font-size: 1.5rem;
+        margin: 0.2rem;
+    }
+}
+  
+@media (max-width: 320px) {
+    .tarjetaDetail {
+        width: 18rem;
+        height: 36rem;
+        margin: 5rem 1rem 0rem 1rem;
+    }
+    
+    .imagenDetail {
+        width: 16rem;
+        height: 16rem;
+        margin: 0.1rem;
+    }
+    
+    .textoDetail {    
+        font-size: 1.5rem;
+        margin: 0.2rem;
+    }
+}
+  
