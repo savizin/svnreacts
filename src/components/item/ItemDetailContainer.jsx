@@ -29,7 +29,7 @@ const ItemDetailContainer = (props) => {
 
     useEffect(() => {
         getObrasDetail();
-    }, [id]);
+    }, [getObrasDetail, id]);
 
     return (
     <>

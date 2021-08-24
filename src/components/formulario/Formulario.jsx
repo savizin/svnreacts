@@ -44,7 +44,7 @@ const Formulario = (props) => {
                 carrito.map((itemDetail) => {
                     const decrement = itemDetail.cantidad;
                     obrasArte.doc(itemDetail.id)
-                        .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
+                    .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
                 })
 
                 swal({
