@@ -23,7 +23,7 @@ Para el desarrollo de esta web se utilizó:
 
 # Cómo levantar el proyecto
 
-1. Clonar el repositorio (`git clone`)
+1. Clonar el repositorio (`git clone https://github.com/savizin/svnreacts.git`)
 2. Obtener node_nodules (`npm 1`)
 3. Tirar `npm start`
 
