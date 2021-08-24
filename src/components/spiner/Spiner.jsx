@@ -1,5 +1,5 @@
 import React from "react";
-import "../spiner/spiner.css";
+import "../../components/spiner/spiner.css";
 
 const Spiner = () => {
 

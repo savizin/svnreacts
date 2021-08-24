@@ -1,5 +1,5 @@
 import React from "react";
-import "../ordencompra/detalleorden.css";
+import "../../components/ordencompra/detalleorden.css";
 
 const DetalleOrden = ({ordenGenerada}) => {
 

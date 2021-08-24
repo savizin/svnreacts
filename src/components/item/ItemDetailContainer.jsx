@@ -4,7 +4,7 @@ import { database } from '../../firebase/firebase.jsx';
 import ItemDetail from "../item/ItemDetail.jsx";
 import swal from 'sweetalert';
 import Spiner from '../spiner/Spiner.jsx';
-import "../item/itemDetail.css";
+import "../../components/item/itemDetail.css";
 
 const ItemDetailContainer = (props) => {
     

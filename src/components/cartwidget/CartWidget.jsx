@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import {MdShoppingCart} from "react-icons/md";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import "../cartwidget/cartWidget.css";
+import "../../components/cartwidget/cartWidget.css";
 
 const IconoCarrito = () => {
 

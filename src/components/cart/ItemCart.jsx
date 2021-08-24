@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { MdDeleteForever } from "react-icons/md";
-import "../cart/cart.css";
+import "../../components/cart/cart.css";
 
 function ItemCart ({itemDetail}) {
 

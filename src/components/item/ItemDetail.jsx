@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import Contador from "../contador/Contador";
 import swal from 'sweetalert';
-import "../item/itemDetail.css";
+import "../../components/item/itemDetail.css";
 
 function ItemDetail ({itemDetail}) {
 
