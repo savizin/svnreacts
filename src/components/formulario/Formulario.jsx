@@ -41,23 +41,23 @@ const Formulario = (props) => {
         ordenes
             .add({nuevaOrden})
             .then((refDoc) => {
+                const idOrden = refDoc;
                 carrito.map((itemDetail) => {
                     const decrement = itemDetail.cantidad;
                     obrasArte.doc(itemDetail.id)
                     .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
-                    refDoc.id;
                 })
 
                 swal({
                     title: "¡ORDEN GENERADA CON ÉXITO!",
-                    text: "ID: " + refDoc.id,
+                    text: "ID: " + idOrden.id,
                 });
                            
                 limpiarCarrito();
                 limpiarFormulario();
                 //Utilizo el useHistory para traer el id del formulario y sus datos
                 //y luego colocarlos en la orden de compra
-                history.push(`/ordencompra/${refDoc.id}`);
+                history.push(`/ordencompra/${idOrden.id}`);
             });
     }
 
