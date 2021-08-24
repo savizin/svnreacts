@@ -45,6 +45,7 @@ const Formulario = (props) => {
                     const decrement = itemDetail.cantidad;
                     obrasArte.doc(itemDetail.id)
                     .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
+                    refDoc.id;
                 })
 
                 swal({
