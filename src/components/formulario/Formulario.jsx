@@ -42,7 +42,7 @@ const Formulario = (props) => {
             .add({nuevaOrden})
             .then((refDoc) => {
                 const idOrden = refDoc;
-                carrito.map((itemDetail) => {
+                carrito.foreach((itemDetail) => {
                     const decrement = itemDetail.cantidad;
                     obrasArte.doc(itemDetail.id)
                     .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
