@@ -1,6 +1,6 @@
 import React from "react";
 import ItemList from "../item/ItemList.jsx";
-import "../../components/itemlistcontainer/itemListContainer.css";
+import "../../../src/components/itemlistcontainer/itemListContainer.css";
 
 const Container = (props) => {
 
