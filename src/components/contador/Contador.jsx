@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/contador/contador.css";
+import "../contador/contador.css";
 
 function Contador ({contador, setContador, inicial, stock}) {
 

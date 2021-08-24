@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "../../components/item/item.css";
+import "../item/item.css";
 
 function Item ({obra}) {    
 

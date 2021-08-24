@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import ItemCart from "./ItemCart.jsx";
-import "../../components/cart/cart.css";
+import "../cart/cart.css";
 
 function Cart (props) {
 

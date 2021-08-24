@@ -1,14 +1,14 @@
-import "./App.css";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";
-import NavBar from "../src/components/navbar/NavBar.jsx";
-import ItemListContainer from "../src/components/itemlistcontainer/ItemListContainer.jsx";
-import ItemDetailContainer from "../src/components/item/ItemDetailContainer";
+import NavBar from "./components/navbar/NavBar.jsx";
+import ItemListContainer from "./components/itemlistcontainer/ItemListContainer.jsx";
+import ItemDetailContainer from "./components/item/ItemDetailContainer";
 import CartContextProvider from "./context/CartContext.jsx";
 import Cart from "./components/cart/Cart.jsx";
 import Formulario from "./components/formulario/Formulario.jsx";
 import Orden from "./components/ordencompra/Orden.jsx";
+import "./app.css";
 
 function App() {
 

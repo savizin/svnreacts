@@ -7,7 +7,7 @@ import Insta from "../../imagenesfooter/insta.png";
 import Arroba from "../../imagenesfooter/arroba.png";
 import Localizacion from "../../imagenesfooter/localizacion.png";
 import Planeta from "../../imagenesfooter/planeta.png";
-import "../../components/footer/footer.css";
+import "../footer/footer.css";
 
 function Footer () {
     return (

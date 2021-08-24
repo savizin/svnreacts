@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext"
 import { useHistory } from "react-router-dom";
 import swal from 'sweetalert';
 import firebase from "firebase";
-import "../../components/formulario/formulario.css";
+import "../formulario/formulario.css";
 
 const Formulario = (props) => {
 
