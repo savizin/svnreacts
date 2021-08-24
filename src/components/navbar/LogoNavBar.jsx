@@ -1,6 +1,6 @@
 import React from "react";
 import SVN from "../../assets/imagenes/imgnav.png";
-import "../../components/navbar/navBar.css";
+import "../navbar/nav.css";
 
 const LogoNavBar = () => {
 
