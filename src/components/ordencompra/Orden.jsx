@@ -30,7 +30,7 @@ const {idOrden} = useParams();
 
 useEffect(() => {
     ordenCompra();
-}, [ordenCompra, idOrden]);
+}, [ordenCompra(), idOrden]);
 
     return (
         <>

@@ -39,7 +39,7 @@ const ItemList = () => {
     useEffect(() => {
         setdisplayObras([]);
         obrasDisponibles();
-    },[obrasDisponibles, categoria]);
+    },[obrasDisponibles(), categoria]);
    
     return (
     <>
