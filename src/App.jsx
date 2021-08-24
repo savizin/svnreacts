@@ -8,7 +8,7 @@ import CartContextProvider from "./context/CartContext.jsx";
 import Cart from "./components/cart/Cart.jsx";
 import Formulario from "./components/formulario/Formulario.jsx";
 import Orden from "./components/ordencompra/Orden.jsx";
-import "./app.css";
+import "./App.css";
 
 function App() {
 
