@@ -30,7 +30,8 @@ const {idOrden} = useParams();
 
 useEffect(() => {
     ordenCompra();
-}, [ordenCompra(), idOrden]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [idOrden]);
 
     return (
         <>

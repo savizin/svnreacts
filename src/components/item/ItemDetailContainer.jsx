@@ -29,7 +29,8 @@ const ItemDetailContainer = (props) => {
 
     useEffect(() => {
         getObrasDetail();
-    }, [getObrasDetail(), id]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [id]);
 
     return (
     <>

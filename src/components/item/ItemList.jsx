@@ -39,7 +39,8 @@ const ItemList = () => {
     useEffect(() => {
         setdisplayObras([]);
         obrasDisponibles();
-    },[obrasDisponibles(), categoria]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[categoria]);
    
     return (
     <>
