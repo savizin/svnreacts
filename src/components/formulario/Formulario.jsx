@@ -42,16 +42,17 @@ const Formulario = (props) => {
             .add({nuevaOrden})
             .then((refDoc) => {
                 const idOrden = refDoc;
-                carrito.foreach((itemDetail) => {
+                carrito.map((itemDetail) => {
                     const decrement = itemDetail.cantidad;
                     obrasArte.doc(itemDetail.id)
                     .update({stock: firebase.firestore.FieldValue.increment(-decrement)});
-                })
-
-                swal({
-                    title: "¡ORDEN GENERADA CON ÉXITO!",
-                    text: "ID: " + idOrden.id,
-                });
+                    return(
+                        swal({
+                            title: "¡ORDEN GENERADA CON ÉXITO!",
+                            text: "ID: " + idOrden.id,
+                        })
+                    )
+                })              
                            
                 limpiarCarrito();
                 limpiarFormulario();
